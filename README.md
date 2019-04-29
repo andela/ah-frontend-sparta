@@ -1,5 +1,5 @@
   ## Author's Haven
-  
+  [![Build Status](https://travis-ci.com/andela/ah-frontend-sparta.svg?branch=develop)](https://travis-ci.com/andela/ah-frontend-sparta)
   ### Vision
   Create a community of like minded authors to foster inspiration and innovation by leveraging the modern web.
 
