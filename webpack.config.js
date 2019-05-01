@@ -24,7 +24,11 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
-        test: /\.(png|jpe?g|gif)$/,
+        test: /\.svg$/,
+        loader: 'svg-inline-loader?classPrefix'
+      },
+      {
+        test: /\.(jpe?g|png|gif)$/,
         use: [
           {
             loader: 'file-loader',
@@ -32,6 +36,7 @@ module.exports = {
           },
         ],
       },
+
     ],
   },
   plugins: [

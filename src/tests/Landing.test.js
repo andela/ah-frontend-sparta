@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Landing from '../components/Landing';
+import Landing from '../pages/Landing';
 
 describe('Landing page', () => {
   it('should render without crashing', () => {
