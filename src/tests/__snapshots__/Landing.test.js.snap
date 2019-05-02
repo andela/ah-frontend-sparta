@@ -1,7 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Landing page should render without crashing 1`] = `
-<h1>
-  Landing Page
-</h1>
+Array [
+  <h1>
+    Landing Page
+  </h1>,
+  <button
+    className=""
+    data-react-toolbox="button"
+    disabled={false}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchStart={[Function]}
+    type="button"
+  >
+    Bookmark
+  </button>,
+]
 `;

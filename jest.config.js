@@ -27,8 +27,11 @@ module.exports = {
 
   // eslint-disable-next-line max-len
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
-  testPathIgnorePatterns: ['\\\\node_modules\\\\'],
+  testPathIgnorePatterns: ['/node_modules/'],
 
+    moduleDirectories: [
+    "node_modules"
+  ],
   // eslint-disable-next-line max-len
   // This option sets the URL for the jsdom environment. It is reflected in properties such as location.href
   testURL: 'http://localhost',
@@ -39,5 +42,7 @@ module.exports = {
 
   // Indicates whether each individual test should be reported during the run
   verbose: false,
-
+  moduleNameMapper: {
+    "\\.(css|scss|jpg|png)$": "<rootDir>/ignore-css.js"
+  },
 };
