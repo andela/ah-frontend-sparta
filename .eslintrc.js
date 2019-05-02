@@ -1,35 +1,28 @@
 module.exports = {
-  env: {
-    browser: true,
-    es6: true
-  },
-  extends: ["plugin:jest/recommended", "airbnb"],
-  globals: {
-    Atomics: "readonly",
-    SharedArrayBuffer: "readonly"
-  },
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true
-    },
-    ecmaVersion: 2018,
-    sourceType: "module"
-  },
-  plugins: ["react", "jest"],
-  rules: {
-    "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
-    "jest/no-disabled-tests": "warn",
-    "jest/no-focused-tests": "error",
-    "jest/no-identical-title": "error",
-    "jest/prefer-to-have-length": "warn",
-    "jest/valid-expect": "error",
-    "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }]
-  },
-  settings: {
-    "import/resolver": {
-      node: {
-        paths: ["src"]
-      }
-    }
-  }
+	"env": {
+		"browser": true,
+		"es6": true,
+		"jest": true
+	},
+	"extends": ["eslint:recommended", "airbnb"],
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 2018,
+		"sourceType": "module"
+	},
+	"plugins": ["jest", "react"],
+	"rules": {
+		"no-param-reassign":"off",
+		"max-len": [1, 80, 2],
+		"react/jsx-uses-react":1,
+		"react/react-in-jsx-scope": 1,
+		"jest/no-disabled-tests": "error",
+		"jest/no-focused-tests": "error",
+		"jest/no-identical-title": "error",
+		"jest/prefer-to-have-length": "warn",
+		"jest/valid-expect": "error"
+	},
+	"parser": "babel-eslint",
 };

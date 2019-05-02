@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Login Page should render without crashing 1`] = `
-<h1>
-  Login
-</h1>
-`;

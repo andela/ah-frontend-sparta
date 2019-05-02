@@ -1,11 +1,22 @@
 language: node_js
 
 node_js:
-  - "stable"
+  - "9"
 
 cache:
   directories:
   - node_modules
 
+before_script:
+  - export CC_TEST_REPORTER_ID=69d342c7df660bb6997b2c60954df3560aaa2837afa461a78a93f6b16441ddaf
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+
 script:
   - npm run test:coverage
+
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+  - jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
+

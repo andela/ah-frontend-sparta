@@ -1,0 +1,156 @@
+@import '../../assets/scss/shared.scss';
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  .outer {
+    width: 100%;
+    height: 100vh;
+    flex-direction: row;
+    display: flex;
+
+    .innerHalf1 {
+      width: 65%;
+      height: 100%;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('../images/login_signup.jpg');
+      background-size: cover;
+      background-position: center;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      color: $secondary-color;
+      padding: 0 2em;
+      box-sizing: border-box;
+      text-align: center;
+
+      .logo {
+        height: 8%;
+      }
+
+      .intro {
+        margin-top: rem(12);
+        font-size: rem(20);
+        font-family: 'Courier New', Courier, monospace;
+      }
+    }
+    
+    .innerHalf2 {
+      width: 35%;
+      height: 100%;
+      background-color: $primary-color;
+
+      .toggleButton {
+        width: 23%;
+        height: rem(26);
+        box-sizing: border-box;
+        border: 1px solid $secondary-color;
+        border-radius: rem(10);
+        flex-direction: row;
+        display: flex;
+        overflow: hidden;
+        float: right;
+        clear: both;
+        margin: rem(15) rem(15) 0 0;
+
+        a {
+          font-size: rem(11);
+          text-decoration: none;
+          font-family: $roboto-font;
+          display: block;
+          width: 50%;
+          height: 100%;
+          text-align: center;
+          padding-top: rem(5);
+          font-weight: bold;
+        }
+
+        .active {
+          background-color: $secondary-color;
+          color: $primary-color;
+        }
+        
+        .inactive {
+          background-color: $primary-color;
+          color: $secondary-color
+        }
+      }
+
+      .innerHalfContent {
+        margin-top: rem(62);
+        margin-left: rem(52);
+        color: $secondary-color;
+        font-size: rem(12);
+        font-family: $roboto-font;
+
+        .signStr, .socialDiv {
+          display: flex;
+          flex-direction: row;
+          font-size: rem(18);
+          margin-bottom: rem(15);
+          text-align: center;
+        }
+
+        form {
+          margin-top: rem(75);
+
+          .forgot {
+            margin-bottom: rem(30);
+
+            span {
+              font-size: rem(16);
+              cursor: pointer;
+            }
+          }
+
+          .other {
+            margin-top: rem(30);
+
+            span {
+              font-size: rem(16);
+
+              a {
+                color: $secondary-color
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.error-msg {
+  margin-top: rem(-30);
+  margin-bottom: rem(20);
+  font-size: rem(16);
+  color: #f00
+}
+
+.innerSocial {
+  display: flex;
+  align-items: center;
+  margin-top: 0.625rem;
+}
+
+.content-continue {
+  padding:0;
+  margin:0;
+}
+
+.google-login {
+  margin-top:1.25rem;
+}
+
+.facebookbutton{
+  padding: 0;
+  margin-right: 0.9375rem;
+  display: block;
+}
+.google-login{
+  align-content: center;
+  margin-top: 1.4375rem;
+}

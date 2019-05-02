@@ -15,6 +15,12 @@ module.exports = {
   // An array of file extensions your modules use
   moduleFileExtensions: ['js', 'json', 'jsx'],
 
+  // A map from regular expressions to module names that allow to stub out resources 
+  // with a single module
+  moduleNameMapper: {
+    '\\.(css|scss|jpg|png|jpeg)$': '<rootDir>/ignore-module.js',
+  },
+
   // eslint-disable-next-line max-len
   // The paths to modules that run some code to configure or set up the testing environment before each test
   setupFiles: ['<rootDir>/src/setupTest.js'],

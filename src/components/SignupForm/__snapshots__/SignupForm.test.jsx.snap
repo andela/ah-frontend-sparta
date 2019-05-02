@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot test 1`] = `
+<div>
+  <div
+    className="signStr spacebottom"
+  >
+    Create an account
+  </div>
+  <form
+    onSubmit={[Function]}
+  >
+    <div
+      className="inputContain"
+    >
+      <input
+        className="input"
+        name="username"
+        onChange={[Function]}
+        placeholder="USERNAME"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      className="inputContain"
+    >
+      <input
+        className="input"
+        name="email"
+        onChange={[Function]}
+        placeholder="EMAIL"
+        type="email"
+        value=""
+      />
+    </div>
+    <div
+      className="inputContain"
+    >
+      <input
+        className="input"
+        name="password"
+        onChange={[Function]}
+        placeholder="PASSWORD"
+        type="password"
+        value=""
+      />
+    </div>
+    <div
+      className="inputContain"
+    >
+      <input
+        className="input"
+        name="confirmPassword"
+        onChange={[Function]}
+        placeholder="CONFIRM PASSWORD"
+        type="password"
+        value=""
+      />
+    </div>
+    
+    <button
+      type="submit"
+    >
+      Signup
+    </button>
+    <div
+      className="other"
+    >
+      <span>
+        Already have an account?
+         
+      </span>
+    </div>
+  </form>
+</div>
+`;

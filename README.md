@@ -1,9 +1,14 @@
   ## Author's Haven
   [![Build Status](https://travis-ci.com/andela/ah-frontend-sparta.svg?branch=develop)](https://travis-ci.com/andela/ah-frontend-sparta)
+
+  [![Coverage Status](https://coveralls.io/repos/github/andela/ah-frontend-sparta/badge.svg?branch=develop)](https://coveralls.io/github/andela/ah-frontend-sparta?branch=develop)
+
+  [![Maintainability](https://api.codeclimate.com/v1/badges/c2d3eb8e3d5b0df87dbb/maintainability)](https://codeclimate.com/github/andela/ah-frontend-sparta/maintainability)
+
+  [![Test Coverage](https://api.codeclimate.com/v1/badges/c2d3eb8e3d5b0df87dbb/test_coverage)](https://codeclimate.com/github/andela/ah-frontend-sparta/test_coverage)
+  
   ### Vision
   Create a community of like minded authors to foster inspiration and innovation by leveraging the modern web.
-
-
 
 
 ### Getting Started
@@ -15,6 +20,9 @@ Things you need to install for the application to run
 
 * Node js
   - Download node js from [Nodejs](https://nodejs.org/en/)
+
+###  Working with files of different types
+Add their file types to the `jest.config file at the root of the project such that your tests do not fail on running them
   
 ### Installing
 
