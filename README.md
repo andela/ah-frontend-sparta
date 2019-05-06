@@ -18,6 +18,9 @@ Things you need to install for the application to run
 
 * Node js
   - Download node js from [Nodejs](https://nodejs.org/en/)
+
+###  Working with files of different types
+Add their file types to the `jest.config file at the root of the project such that your tests do not fail on running them
   
 ### Installing
 
