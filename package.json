@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/andela/ah-frontend-sparta#readme",
   "dependencies": {
+    "axios": "^0.18.0",
     "babel-jest": "^24.7.1",
     "core-js": "^3.0.1",
     "css-loader": "^2.1.1",
