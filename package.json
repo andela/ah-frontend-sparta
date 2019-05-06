@@ -4,10 +4,11 @@
   "description": "Authors Haven Project Front End",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --open --hot",
+    "start:dev": "webpack-dev-server --mode development --open --hot",
+    "start": "node server.js",
     "build": "webpack --mode production",
     "lint": "eslint src --fix",
-    "test": "jest -u",
+    "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --collectCoverage",
     "scss": "node-sass scss/style.scss assets/css/style.css --watch",
