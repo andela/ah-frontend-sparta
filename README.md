@@ -1,9 +1,12 @@
   ## Author's Haven
   [![Build Status](https://travis-ci.com/andela/ah-frontend-sparta.svg?branch=develop)](https://travis-ci.com/andela/ah-frontend-sparta)
+
+  [![Maintainability](https://api.codeclimate.com/v1/badges/c2d3eb8e3d5b0df87dbb/maintainability)](https://codeclimate.com/github/andela/ah-frontend-sparta/maintainability)
+
+  [![Test Coverage](https://api.codeclimate.com/v1/badges/c2d3eb8e3d5b0df87dbb/test_coverage)](https://codeclimate.com/github/andela/ah-frontend-sparta/test_coverage)
+  
   ### Vision
   Create a community of like minded authors to foster inspiration and innovation by leveraging the modern web.
-
-
 
 
 ### Getting Started
