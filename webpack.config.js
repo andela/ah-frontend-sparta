@@ -16,10 +16,12 @@ module.exports = {
   output: {
     path: path.join(__dirname, '/dist'),
     filename: 'index_bundle.js',
+    publicPath: '/',
   },
   resolve: {
     extensions: ['.js', '.jsx'],
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {

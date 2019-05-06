@@ -37,9 +37,102 @@ Array [
     <div
       className="forgot"
     >
-      <span>
+      <span
+        data-target="#forgotPassword"
+        data-toggle="modal"
+      >
         Forgot password?
       </span>
+      <div>
+        <div
+          aria-hidden="true"
+          aria-labelledby="exampleModalLabel"
+          className="modal fade"
+          id="forgotPassword"
+          role="dialog"
+          tabIndex="-1"
+        >
+          <div
+            className="modal-dialog custom-dialog"
+            role="document"
+          >
+            <div
+              className="modal-content customise_model"
+            >
+              <div
+                className="modal-header"
+              >
+                <h3
+                  className="modal-title"
+                  id="exampleModalLabel"
+                >
+                  Authors Haven
+                </h3>
+                <button
+                  aria-label="Close"
+                  className="close"
+                  data-dismiss="modal"
+                  type="button"
+                >
+                  <span
+                    aria-hidden="true"
+                  >
+                    ×
+                  </span>
+                </button>
+              </div>
+              <div
+                className="modal-body"
+              >
+                <div
+                  className="password_reset"
+                >
+                  <div
+                    className="form-group"
+                  >
+                    <label
+                      className="col-form-label form_label"
+                      htmlFor="email"
+                      id="hfjfh"
+                    >
+                      <h5>
+                        Forgotten Password?
+                      </h5>
+                      <h6
+                        className="paragraph-infor"
+                      >
+                        Please enter your Email address. A link with instructions will be sent to you to reset your Password
+                      </h6>
+                      <input
+                        className="form-control"
+                        id="recipient-email"
+                        name="email"
+                        onChange={[Function]}
+                        placeholder="Enter your email"
+                        required={true}
+                        type="email"
+                        value=""
+                      />
+                    </label>
+                  </div>
+                  <div
+                    className="modal-footer"
+                  >
+                    <button
+                      className="btn btn-primary send-button"
+                      data-dismiss="modal"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      Click to send link to email
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <button
       type="submit"

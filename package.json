@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Authors Haven Project Front End",
   "main": "index.js",
+  "engines": {
+    "node": "10.15.1"
+  },
   "scripts": {
     "start:dev": "webpack-dev-server --mode development --open --hot --https",
     "start": "node server.js",
