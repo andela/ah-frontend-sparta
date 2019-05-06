@@ -1,15 +1,12 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
-import LandingPageWrapper from '../components/LandingPageWrapper';
-import LandingImage from '../../images/landing_image.jpg';
+import LandingPageWrapper from '../../components/LandingPageWrapper';
+import LandingImage from '../../assets/images/landing_image.jpg';
 
-import '../assets/scss/style.scss';
+import './Landing.scss';
 
 
 const Landing = () => (
     <div>
-      <Navbar/>
-      
       <div className="page-banner-image">
          <img className='LandingImage' src={LandingImage} alt="Landing image" />
       </div>

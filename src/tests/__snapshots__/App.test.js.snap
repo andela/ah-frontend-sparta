@@ -1,17 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App should render without crashing 1`] = `
-<div>
+Array [
   <div
     className="nav"
   >
     <div
       className="nav-logo"
     >
-      <img
-        alt="site logo"
-        src={Object {}}
-      />
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <img
+          alt="site logo"
+          src={Object {}}
+        />
+      </a>
     </div>
     <div
       className="nav-menu"
@@ -57,407 +62,409 @@ exports[`App should render without crashing 1`] = `
         </li>
       </ul>
     </div>
-  </div>
-  <div
-    className="page-banner-image"
-  >
-    <img
-      alt="Landing image"
-      className="LandingImage"
-      src={Object {}}
-    />
-  </div>
-  <div
-    className="small-screen"
-  >
-    <div>
-      <form>
-        <input
-          placeholder="SEARCH"
-          type="text"
-        />
-      </form>
+  </div>,
+  <div>
+    <div
+      className="page-banner-image"
+    >
+      <img
+        alt="Landing image"
+        className="LandingImage"
+        src={Object {}}
+      />
     </div>
-    <div>
-      <a
-        href="/login"
-      >
-        Account
-      </a>
-    </div>
-  </div>
-  <div
-    className="wrapper"
-  >
-    <div>
-      <div
-        className="sample-articles"
-      >
-        <div
-          className="article-image"
-        >
-          <img
-            alt="Article image"
-            src={Object {}}
+    <div
+      className="small-screen"
+    >
+      <div>
+        <form>
+          <input
+            placeholder="SEARCH"
+            type="text"
           />
-        </div>
-        <div
-          className="trending-articles"
-        >
-          <h4>
-            Post one
-          </h4>
-          <h6
-            className="sample_article_start"
-          >
-            too long a story
-          </h6>
-          <p
-            className="author_name"
-          >
-            <b>
-              Roghashin Timbiti
-            </b>
-          </p>
-          <h6>
-            May 18, 2019
-             - 3 min read
-          </h6>
-        </div>
+        </form>
       </div>
-      <div
-        className="sample-articles"
-      >
-        <div
-          className="article-image"
+      <div>
+        <a
+          href="/login"
         >
-          <img
-            alt="Article image"
-            src={Object {}}
-          />
-        </div>
-        <div
-          className="trending-articles"
-        >
-          <h4>
-            Post two
-          </h4>
-          <h6
-            className="sample_article_start"
-          >
-            too long a story
-          </h6>
-          <p
-            className="author_name"
-          >
-            <b>
-              null null
-            </b>
-          </p>
-          <h6>
-            April 18, 2019
-             - 3 min read
-          </h6>
-        </div>
-      </div>
-      <div
-        className="sample-articles"
-      >
-        <div
-          className="article-image"
-        >
-          <img
-            alt="Article image"
-            src={Object {}}
-          />
-        </div>
-        <div
-          className="trending-articles"
-        >
-          <h4>
-            Post three
-          </h4>
-          <h6
-            className="sample_article_start"
-          >
-            too long a story
-          </h6>
-          <p
-            className="author_name"
-          >
-            <b>
-              null null
-            </b>
-          </p>
-          <h6>
-            April 18, 2019
-             - 3 min read
-          </h6>
-        </div>
-      </div>
-      <div
-        className="sample-articles"
-      >
-        <div
-          className="article-image"
-        >
-          <img
-            alt="Article image"
-            src={Object {}}
-          />
-        </div>
-        <div
-          className="trending-articles"
-        >
-          <h4>
-            Post four
-          </h4>
-          <h6
-            className="sample_article_start"
-          >
-            too long a story
-          </h6>
-          <p
-            className="author_name"
-          >
-            <b>
-              null null
-            </b>
-          </p>
-          <h6>
-            April 18, 2019
-             - 3 min read
-          </h6>
-        </div>
-      </div>
-      <div
-        className="sample-articles"
-      >
-        <div
-          className="article-image"
-        >
-          <img
-            alt="Article image"
-            src={Object {}}
-          />
-        </div>
-        <div
-          className="trending-articles"
-        >
-          <h4>
-            Post five
-          </h4>
-          <h6
-            className="sample_article_start"
-          >
-            too long a story
-          </h6>
-          <p
-            className="author_name"
-          >
-            <b>
-              null null
-            </b>
-          </p>
-          <h6>
-            April 18, 2019
-             - 3 min read
-          </h6>
-        </div>
-      </div>
-      <div
-        className="sample-articles"
-      >
-        <div
-          className="article-image"
-        >
-          <img
-            alt="Article image"
-            src={Object {}}
-          />
-        </div>
-        <div
-          className="trending-articles"
-        >
-          <h4>
-            Post six
-          </h4>
-          <h6
-            className="sample_article_start"
-          >
-            too long a story
-          </h6>
-          <p
-            className="author_name"
-          >
-            <b>
-              null null
-            </b>
-          </p>
-          <h6>
-            April 18, 2019
-             - 3 min read
-          </h6>
-        </div>
-      </div>
-      <div
-        className="sample-articles"
-      >
-        <div
-          className="article-image"
-        >
-          <img
-            alt="Article image"
-            src={Object {}}
-          />
-        </div>
-        <div
-          className="trending-articles"
-        >
-          <h4>
-            Post seven
-          </h4>
-          <h6
-            className="sample_article_start"
-          >
-            too long a story
-          </h6>
-          <p
-            className="author_name"
-          >
-            <b>
-              null null
-            </b>
-          </p>
-          <h6>
-            April 18, 2019
-             - 3 min read
-          </h6>
-        </div>
+          Account
+        </a>
       </div>
     </div>
-    <div>
-      <h1>
-        Trending
-      </h1>
-      <br />
-      <hr />
-      <br />
-      <div
-        className="trending"
-      >
+    <div
+      className="wrapper"
+    >
+      <div>
         <div
-          className="trending-articles"
+          className="sample-articles"
         >
-          <h4>
-            Why do we sleep
-          </h4>
-          <p
-            className="author_name"
+          <div
+            className="article-image"
           >
-            By Francis Kiryowa
-          </p>
-          <h6>
-            APR 27, 2019 - 3 min read
-          </h6>
+            <img
+              alt="Article image"
+              src={Object {}}
+            />
+          </div>
+          <div
+            className="trending-articles"
+          >
+            <h4>
+              Post one
+            </h4>
+            <h6
+              className="sample_article_start"
+            >
+              too long a story
+            </h6>
+            <p
+              className="author_name"
+            >
+              <b>
+                Roghashin Timbiti
+              </b>
+            </p>
+            <h6>
+              May 18, 2019
+               - 3 min read
+            </h6>
+          </div>
         </div>
         <div
-          className="book-mark-holder"
+          className="sample-articles"
         >
-          <img
-            className="bookmark-image"
-            src={Object {}}
-          />
+          <div
+            className="article-image"
+          >
+            <img
+              alt="Article image"
+              src={Object {}}
+            />
+          </div>
+          <div
+            className="trending-articles"
+          >
+            <h4>
+              Post two
+            </h4>
+            <h6
+              className="sample_article_start"
+            >
+              too long a story
+            </h6>
+            <p
+              className="author_name"
+            >
+              <b>
+                null null
+              </b>
+            </p>
+            <h6>
+              April 18, 2019
+               - 3 min read
+            </h6>
+          </div>
+        </div>
+        <div
+          className="sample-articles"
+        >
+          <div
+            className="article-image"
+          >
+            <img
+              alt="Article image"
+              src={Object {}}
+            />
+          </div>
+          <div
+            className="trending-articles"
+          >
+            <h4>
+              Post three
+            </h4>
+            <h6
+              className="sample_article_start"
+            >
+              too long a story
+            </h6>
+            <p
+              className="author_name"
+            >
+              <b>
+                null null
+              </b>
+            </p>
+            <h6>
+              April 18, 2019
+               - 3 min read
+            </h6>
+          </div>
+        </div>
+        <div
+          className="sample-articles"
+        >
+          <div
+            className="article-image"
+          >
+            <img
+              alt="Article image"
+              src={Object {}}
+            />
+          </div>
+          <div
+            className="trending-articles"
+          >
+            <h4>
+              Post four
+            </h4>
+            <h6
+              className="sample_article_start"
+            >
+              too long a story
+            </h6>
+            <p
+              className="author_name"
+            >
+              <b>
+                null null
+              </b>
+            </p>
+            <h6>
+              April 18, 2019
+               - 3 min read
+            </h6>
+          </div>
+        </div>
+        <div
+          className="sample-articles"
+        >
+          <div
+            className="article-image"
+          >
+            <img
+              alt="Article image"
+              src={Object {}}
+            />
+          </div>
+          <div
+            className="trending-articles"
+          >
+            <h4>
+              Post five
+            </h4>
+            <h6
+              className="sample_article_start"
+            >
+              too long a story
+            </h6>
+            <p
+              className="author_name"
+            >
+              <b>
+                null null
+              </b>
+            </p>
+            <h6>
+              April 18, 2019
+               - 3 min read
+            </h6>
+          </div>
+        </div>
+        <div
+          className="sample-articles"
+        >
+          <div
+            className="article-image"
+          >
+            <img
+              alt="Article image"
+              src={Object {}}
+            />
+          </div>
+          <div
+            className="trending-articles"
+          >
+            <h4>
+              Post six
+            </h4>
+            <h6
+              className="sample_article_start"
+            >
+              too long a story
+            </h6>
+            <p
+              className="author_name"
+            >
+              <b>
+                null null
+              </b>
+            </p>
+            <h6>
+              April 18, 2019
+               - 3 min read
+            </h6>
+          </div>
+        </div>
+        <div
+          className="sample-articles"
+        >
+          <div
+            className="article-image"
+          >
+            <img
+              alt="Article image"
+              src={Object {}}
+            />
+          </div>
+          <div
+            className="trending-articles"
+          >
+            <h4>
+              Post seven
+            </h4>
+            <h6
+              className="sample_article_start"
+            >
+              too long a story
+            </h6>
+            <p
+              className="author_name"
+            >
+              <b>
+                null null
+              </b>
+            </p>
+            <h6>
+              April 18, 2019
+               - 3 min read
+            </h6>
+          </div>
         </div>
       </div>
-      <br />
-      <div
-        className="trending"
-      >
+      <div>
+        <h1>
+          Trending
+        </h1>
+        <br />
+        <hr />
+        <br />
         <div
-          className="trending-articles"
+          className="trending"
         >
-          <h4>
-            Why do we sleep
-          </h4>
-          <p
-            className="author_name"
+          <div
+            className="trending-articles"
           >
-            By Francis Kiryowa
-          </p>
-          <h6>
-            APR 27, 2019 - 3 min read
-          </h6>
-        </div>
-        <div
-          className="book-mark-holder"
-        >
-          <img
-            className="bookmark-image"
-            src={Object {}}
-          />
-        </div>
-      </div>
-      <br />
-      <div
-        className="trending"
-      >
-        <div
-          className="trending-articles"
-        >
-          <h4>
-            Why do we sleep
-          </h4>
-          <p
-            className="author_name"
+            <h4>
+              Why do we sleep
+            </h4>
+            <p
+              className="author_name"
+            >
+              By Francis Kiryowa
+            </p>
+            <h6>
+              APR 27, 2019 - 3 min read
+            </h6>
+          </div>
+          <div
+            className="book-mark-holder"
           >
-            By Francis Kiryowa
-          </p>
-          <h6>
-            APR 27, 2019 - 3 min read
-          </h6>
+            <img
+              className="bookmark-image"
+              src={Object {}}
+            />
+          </div>
         </div>
+        <br />
         <div
-          className="book-mark-holder"
+          className="trending"
         >
-          <img
-            className="bookmark-image"
-            src={Object {}}
-          />
-        </div>
-      </div>
-      <br />
-      <div
-        className="trending"
-      >
-        <div
-          className="trending-articles"
-        >
-          <h4>
-            Why do we sleep
-          </h4>
-          <p
-            className="author_name"
+          <div
+            className="trending-articles"
           >
-            By Francis Kiryowa
-          </p>
-          <h6>
-            APR 27, 2019 - 3 min read
-          </h6>
+            <h4>
+              Why do we sleep
+            </h4>
+            <p
+              className="author_name"
+            >
+              By Francis Kiryowa
+            </p>
+            <h6>
+              APR 27, 2019 - 3 min read
+            </h6>
+          </div>
+          <div
+            className="book-mark-holder"
+          >
+            <img
+              className="bookmark-image"
+              src={Object {}}
+            />
+          </div>
         </div>
+        <br />
         <div
-          className="book-mark-holder"
+          className="trending"
         >
-          <img
-            className="bookmark-image"
-            src={Object {}}
-          />
+          <div
+            className="trending-articles"
+          >
+            <h4>
+              Why do we sleep
+            </h4>
+            <p
+              className="author_name"
+            >
+              By Francis Kiryowa
+            </p>
+            <h6>
+              APR 27, 2019 - 3 min read
+            </h6>
+          </div>
+          <div
+            className="book-mark-holder"
+          >
+            <img
+              className="bookmark-image"
+              src={Object {}}
+            />
+          </div>
+        </div>
+        <br />
+        <div
+          className="trending"
+        >
+          <div
+            className="trending-articles"
+          >
+            <h4>
+              Why do we sleep
+            </h4>
+            <p
+              className="author_name"
+            >
+              By Francis Kiryowa
+            </p>
+            <h6>
+              APR 27, 2019 - 3 min read
+            </h6>
+          </div>
+          <div
+            className="book-mark-holder"
+          >
+            <img
+              className="bookmark-image"
+              src={Object {}}
+            />
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <br />
-  <br />
-  <br />
-</div>
+    <br />
+    <br />
+    <br />
+  </div>,
+]
 `;

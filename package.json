@@ -4,13 +4,14 @@
   "description": "Authors Haven Project Front End",
   "main": "index.js",
   "scripts": {
-    "start:dev": "webpack-dev-server --mode development --open --hot",
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
     "lint": "eslint src --fix",
     "test": "jest -u",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --collectCoverage"
+    "test:coverage": "jest --collectCoverage",
+    "scss": "node-sass scss/style.scss assets/css/style.css --watch",
+    "toolbox": "react-toolbox-themr"
   },
   "repository": {
     "type": "git",
@@ -57,7 +58,7 @@
     "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-jest": "^22.5.1",
     "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react": "^7.13.0",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^24.7.1",
     "react-test-renderer": "^16.8.6",
