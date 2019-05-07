@@ -3,10 +3,12 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import SignupForm from '../../components/SignupForm';
-import { FaceBook, Google, Twitter } from '../../assets/icons';
 import logo from '../../assets/images/logo.png';
 import '../../assets/scss/Login.scss';
 import { signUpUser } from '../../actions/signupSigninActions';
+import GoogleButton from '../../components/socialLogin/GoogleButton';
+import GoogleHelper from '../../helpers/responseGoogle';
+import FaceBookButton from '../../components/socialLogin/faceBookButton';
 
 export class Signup extends React.Component {
   constructor(props) {
@@ -77,11 +79,10 @@ export class Signup extends React.Component {
               <div className="socialDiv">
                 Continue with
                 {' '}
-                <FaceBook />
+                <FaceBookButton />
                 {' '}
-                <Twitter />
                 {' '}
-                <Google />
+                <GoogleButton responseGoogle={GoogleHelper} />
               </div>
               <div className="signStr">Or</div>
               <SignupForm

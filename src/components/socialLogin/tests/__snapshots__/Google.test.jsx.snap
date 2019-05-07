@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Google sign in should render without crashing 1`] = `
+<div
+  className="google-login"
+>
+  <span
+    className="fab fa-google-plus"
+    disabled={true}
+    onClick={[Function]}
+    role="presentation"
+  />
+</div>
+`;
+
+exports[`Signup should should render correctly 1`] = `ShallowWrapper {}`;

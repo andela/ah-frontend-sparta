@@ -87,7 +87,8 @@ body {
         font-family: $roboto-font;
 
         .signStr, .socialDiv {
-          display: block;
+          display: flex;
+          flex-direction: row;
           font-size: rem(18);
           margin-bottom: rem(15);
           text-align: center;
@@ -127,4 +128,29 @@ body {
   margin-bottom: rem(20);
   font-size: rem(16);
   color: #f00
+}
+
+.innerSocial {
+  display: flex;
+  align-items: center;
+  margin-top: 0.625rem;
+}
+
+.content-continue {
+  padding:0;
+  margin:0;
+}
+
+.google-login {
+  margin-top:1.25rem;
+}
+
+.facebookbutton{
+  padding: 0;
+  margin-right: 0.9375rem;
+  display: block;
+}
+.google-login{
+  align-content: center;
+  margin-top: 1.4375rem;
 }
