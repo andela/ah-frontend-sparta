@@ -20,6 +20,7 @@ module.exports = {
     ],
     "rules": {
         'no-console': 'off',
+        'react/prop-types':'off',
         "react/jsx-uses-react":1,
         "react/react-in-jsx-scope": 1,
         "jest/no-disabled-tests": "warn",
