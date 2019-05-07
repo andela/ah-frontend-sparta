@@ -1,4 +1,4 @@
-import GET_ARTICLES from '../../actions/types';
+import { GET_ARTICLES } from '../../actions/types';
 import articlesReducer from '../../reducers/articlesReducer';
 
 describe('Articles Reducer', () => {
