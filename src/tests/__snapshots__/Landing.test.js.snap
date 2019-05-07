@@ -3,62 +3,6 @@
 exports[`Landing page should render without crashing 1`] = `
 <div>
   <div
-    className="nav"
-  >
-    <div
-      className="nav-logo"
-    >
-      <img
-        alt="site logo"
-        src={Object {}}
-      />
-    </div>
-    <div
-      className="nav-menu"
-    >
-      <ul>
-        <li>
-          <form>
-            <input
-              placeholder="SEARCH"
-              type="text"
-            />
-          </form>
-        </li>
-        <li
-          className="nav-item dropdown"
-        >
-          <a
-            aria-expanded="false"
-            aria-haspopup="true"
-            className="nav-link dropdown-toggle"
-            data-toggle="dropdown"
-            href="#"
-            role="button"
-          >
-            Accounts
-          </a>
-          <div
-            className="dropdown-menu"
-          >
-            <a
-              className="dropdown-item"
-              href="/register"
-            >
-              Register
-            </a>
-            <a
-              className="dropdown-item"
-              href="/login"
-            >
-              Login
-            </a>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div
     className="page-banner-image"
   >
     <img
