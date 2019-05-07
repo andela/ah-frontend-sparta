@@ -4,13 +4,12 @@
   "description": "Authors Haven Project Front End",
   "main": "index.js",
   "scripts": {
-    "start:dev": "webpack-dev-server --mode development --open --hot",
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
     "lint": "eslint src --fix",
-    "test": "jest -u",
+    "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --collectCoverage"
+    "test:coverage": "jest --collectCoverage --collectCoverageFrom=src/**/*.{js,jsx} --collectCoverageFrom=!src/index.js --collectCoverageFrom=!src/store.js"
   },
   "repository": {
     "type": "git",
@@ -71,4 +70,5 @@
       "enzyme-to-json/serializer"
     ]
   }
+
 }
