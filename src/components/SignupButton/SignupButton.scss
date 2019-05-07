@@ -1,0 +1,13 @@
+@import '../../assets/scss/shared.scss';
+
+button {
+    padding: rem(10) rem(30);
+    border-radius: rem(25);
+    font-size: rem(14);
+    font-weight: bold;
+    outline: transparent;
+
+    &:active {
+        border-color: $primary-color;
+    }
+}
