@@ -38,7 +38,7 @@ Array [
             aria-haspopup="true"
             className="nav-link dropdown-toggle"
             data-toggle="dropdown"
-            href="#"
+            href="dummy.index"
             role="button"
           >
             Accounts
@@ -71,7 +71,7 @@ Array [
       className="page-banner-image"
     >
       <img
-        alt="Landing image"
+        alt="Landing page."
         className="LandingImage"
         src={Object {}}
       />
@@ -106,7 +106,7 @@ Array [
             className="article-image"
           >
             <img
-              alt="Article image"
+              alt="Article"
               src={Object {}}
             />
           </div>
@@ -130,7 +130,8 @@ Array [
             </p>
             <h6>
               May 18, 2019
-               - 3 min read
+               
+              - 3 min read
             </h6>
           </div>
         </div>
@@ -141,7 +142,7 @@ Array [
             className="article-image"
           >
             <img
-              alt="Article image"
+              alt="Article"
               src={Object {}}
             />
           </div>
@@ -165,7 +166,8 @@ Array [
             </p>
             <h6>
               April 18, 2019
-               - 3 min read
+               
+              - 3 min read
             </h6>
           </div>
         </div>
@@ -176,7 +178,7 @@ Array [
             className="article-image"
           >
             <img
-              alt="Article image"
+              alt="Article"
               src={Object {}}
             />
           </div>
@@ -200,7 +202,8 @@ Array [
             </p>
             <h6>
               April 18, 2019
-               - 3 min read
+               
+              - 3 min read
             </h6>
           </div>
         </div>
@@ -211,7 +214,7 @@ Array [
             className="article-image"
           >
             <img
-              alt="Article image"
+              alt="Article"
               src={Object {}}
             />
           </div>
@@ -235,7 +238,8 @@ Array [
             </p>
             <h6>
               April 18, 2019
-               - 3 min read
+               
+              - 3 min read
             </h6>
           </div>
         </div>
@@ -246,7 +250,7 @@ Array [
             className="article-image"
           >
             <img
-              alt="Article image"
+              alt="Article"
               src={Object {}}
             />
           </div>
@@ -270,7 +274,8 @@ Array [
             </p>
             <h6>
               April 18, 2019
-               - 3 min read
+               
+              - 3 min read
             </h6>
           </div>
         </div>
@@ -281,7 +286,7 @@ Array [
             className="article-image"
           >
             <img
-              alt="Article image"
+              alt="Article"
               src={Object {}}
             />
           </div>
@@ -305,7 +310,8 @@ Array [
             </p>
             <h6>
               April 18, 2019
-               - 3 min read
+               
+              - 3 min read
             </h6>
           </div>
         </div>
@@ -316,7 +322,7 @@ Array [
             className="article-image"
           >
             <img
-              alt="Article image"
+              alt="Article"
               src={Object {}}
             />
           </div>
@@ -340,7 +346,8 @@ Array [
             </p>
             <h6>
               April 18, 2019
-               - 3 min read
+               
+              - 3 min read
             </h6>
           </div>
         </div>
@@ -374,6 +381,7 @@ Array [
             className="book-mark-holder"
           >
             <img
+              alt="bookmark"
               className="bookmark-image"
               src={Object {}}
             />
@@ -402,6 +410,7 @@ Array [
             className="book-mark-holder"
           >
             <img
+              alt="bookmark"
               className="bookmark-image"
               src={Object {}}
             />
@@ -430,6 +439,7 @@ Array [
             className="book-mark-holder"
           >
             <img
+              alt="bookmark"
               className="bookmark-image"
               src={Object {}}
             />
@@ -458,6 +468,7 @@ Array [
             className="book-mark-holder"
           >
             <img
+              alt="bookmark"
               className="bookmark-image"
               src={Object {}}
             />

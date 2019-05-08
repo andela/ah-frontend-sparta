@@ -6,7 +6,7 @@ exports[`Landing page should render without crashing 1`] = `
     className="page-banner-image"
   >
     <img
-      alt="Landing image"
+      alt="Landing page."
       className="LandingImage"
       src={Object {}}
     />
@@ -41,7 +41,7 @@ exports[`Landing page should render without crashing 1`] = `
           className="article-image"
         >
           <img
-            alt="Article image"
+            alt="Article"
             src={Object {}}
           />
         </div>
@@ -65,7 +65,8 @@ exports[`Landing page should render without crashing 1`] = `
           </p>
           <h6>
             May 18, 2019
-             - 3 min read
+             
+            - 3 min read
           </h6>
         </div>
       </div>
@@ -76,7 +77,7 @@ exports[`Landing page should render without crashing 1`] = `
           className="article-image"
         >
           <img
-            alt="Article image"
+            alt="Article"
             src={Object {}}
           />
         </div>
@@ -100,7 +101,8 @@ exports[`Landing page should render without crashing 1`] = `
           </p>
           <h6>
             April 18, 2019
-             - 3 min read
+             
+            - 3 min read
           </h6>
         </div>
       </div>
@@ -111,7 +113,7 @@ exports[`Landing page should render without crashing 1`] = `
           className="article-image"
         >
           <img
-            alt="Article image"
+            alt="Article"
             src={Object {}}
           />
         </div>
@@ -135,7 +137,8 @@ exports[`Landing page should render without crashing 1`] = `
           </p>
           <h6>
             April 18, 2019
-             - 3 min read
+             
+            - 3 min read
           </h6>
         </div>
       </div>
@@ -146,7 +149,7 @@ exports[`Landing page should render without crashing 1`] = `
           className="article-image"
         >
           <img
-            alt="Article image"
+            alt="Article"
             src={Object {}}
           />
         </div>
@@ -170,7 +173,8 @@ exports[`Landing page should render without crashing 1`] = `
           </p>
           <h6>
             April 18, 2019
-             - 3 min read
+             
+            - 3 min read
           </h6>
         </div>
       </div>
@@ -181,7 +185,7 @@ exports[`Landing page should render without crashing 1`] = `
           className="article-image"
         >
           <img
-            alt="Article image"
+            alt="Article"
             src={Object {}}
           />
         </div>
@@ -205,7 +209,8 @@ exports[`Landing page should render without crashing 1`] = `
           </p>
           <h6>
             April 18, 2019
-             - 3 min read
+             
+            - 3 min read
           </h6>
         </div>
       </div>
@@ -216,7 +221,7 @@ exports[`Landing page should render without crashing 1`] = `
           className="article-image"
         >
           <img
-            alt="Article image"
+            alt="Article"
             src={Object {}}
           />
         </div>
@@ -240,7 +245,8 @@ exports[`Landing page should render without crashing 1`] = `
           </p>
           <h6>
             April 18, 2019
-             - 3 min read
+             
+            - 3 min read
           </h6>
         </div>
       </div>
@@ -251,7 +257,7 @@ exports[`Landing page should render without crashing 1`] = `
           className="article-image"
         >
           <img
-            alt="Article image"
+            alt="Article"
             src={Object {}}
           />
         </div>
@@ -275,7 +281,8 @@ exports[`Landing page should render without crashing 1`] = `
           </p>
           <h6>
             April 18, 2019
-             - 3 min read
+             
+            - 3 min read
           </h6>
         </div>
       </div>
@@ -309,6 +316,7 @@ exports[`Landing page should render without crashing 1`] = `
           className="book-mark-holder"
         >
           <img
+            alt="bookmark"
             className="bookmark-image"
             src={Object {}}
           />
@@ -337,6 +345,7 @@ exports[`Landing page should render without crashing 1`] = `
           className="book-mark-holder"
         >
           <img
+            alt="bookmark"
             className="bookmark-image"
             src={Object {}}
           />
@@ -365,6 +374,7 @@ exports[`Landing page should render without crashing 1`] = `
           className="book-mark-holder"
         >
           <img
+            alt="bookmark"
             className="bookmark-image"
             src={Object {}}
           />
@@ -393,6 +403,7 @@ exports[`Landing page should render without crashing 1`] = `
           className="book-mark-holder"
         >
           <img
+            alt="bookmark"
             className="bookmark-image"
             src={Object {}}
           />

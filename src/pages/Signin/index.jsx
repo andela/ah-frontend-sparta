@@ -38,6 +38,7 @@ export class Signin extends React.Component {
   };
 
   render() {
+    const { email, password } = this.state;
     return (
       <div className="outer">
         <div className="innerHalf1">
@@ -59,6 +60,8 @@ export class Signin extends React.Component {
               <SigninForm
                 onChange={this.onChange}
                 handleSubmit={this.handleSubmit}
+                email={email}
+                password={password}
               />
             </div>
           </div>
