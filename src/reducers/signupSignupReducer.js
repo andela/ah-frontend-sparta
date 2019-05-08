@@ -24,7 +24,7 @@ export default (state = initialState, action) => {
       return { ...state, confirm_password: action.payload };
 
     case types.ERROR:
-      return { ...state, error: action.payload }
+      return { ...state, error: action.payload };
 
     default:
       return state;

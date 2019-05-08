@@ -67,14 +67,13 @@ const Signup = props => {
           placeholder="CONFIRM PASSWORD"
           onChangeInput={e => onChangeConfPassword(e)}
         />
-        {signupData.error !== '' ? (
+        {signupData.error !== null ? (
           <div className="error-msg">{signupData.error}</div>
         ) : null}
         <Button value="Signup" />
         <div className="other">
           <span>
-            Already have an account?{' '}
-            <Link to={'/login'}>Signin</Link>
+            Already have an account? <Link to={"/login"}>Signin</Link>
           </span>
         </div>
       </form>

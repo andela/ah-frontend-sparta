@@ -2,4 +2,5 @@ export const USERNAME_CHANGED = 'USERNAME_CHANGED';
 export const EMAIL_CHANGED = 'EMAIL_CHANGED';
 export const PASSWORD_CHANGED = 'PASSWORD_CHANGED';
 export const CONF_PASSWORD_CHANGED = 'CONF_PASSWORD_CHANGED';
-export const ERROR = 'ERROR'
+export const ERROR = 'ERROR';
+export const GET_ARTICLES = 'GET_ARTICLES';

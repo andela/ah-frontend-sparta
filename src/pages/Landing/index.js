@@ -1,29 +1,44 @@
-import React from 'react';
-import LandingPageWrapper from '../../components/LandingPageWrapper';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import ArticleContainer from '../../components/Articles/ArticleContainer';
 import LandingImage from '../../assets/images/landing_image.jpg';
+// import ArticleData from '../../data/sample_articles.js';
+import { fetchArticles } from '../../actions/articlesActions';
 
 import './Landing.scss';
 
+export class Landing extends Component {
+	componentDidMount = () => {
+		this.props.fetchArticles();
+	};
 
-const Landing = () => (
-    <div>
-      <div className="page-banner-image">
-         <img className='LandingImage' src={LandingImage} alt="Landing image" />
-      </div>
-      <div className="small-screen">
-        <div>
-            <form>
-              <input type="text" placeholder="SEARCH" />
-            </form>
-        </div>
-        <div><a href="/login">Account</a></div>
-      </div>
-      <LandingPageWrapper  />
-      <br></br>
-      <br></br>
-      <br></br>
-    </div>
-    
-);
+	render() {
+		return (
+			<div>
+				<div className='page-banner-image'>
+					<img className='LandingImage' src={LandingImage} alt='Landing image' />
+				</div>
+				<div className='small-screen'>
+					<div>
+						<form>
+							<input type='text' placeholder='SEARCH' />
+						</form>
+					</div>
+					<div>
+						<a href='/login'>Account</a>
+					</div>
+				</div>
+				<ArticleContainer articles={this.props.articles} />
+				<br />
+				<br />
+				<br />
+			</div>
+		);
+	}
+}
 
-export default Landing;
+const mapStateToProps = (state) => ({
+	articles: state.articles
+});
+
+export default connect(mapStateToProps, { fetchArticles })(Landing);

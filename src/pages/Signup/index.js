@@ -1,6 +1,6 @@
 import React from 'react';
 import SignupForm from '../../components/SignupForm';
-import { FaceBook, Google, Twitter } from '../../assets/icons'
+import { FaceBook, Google, Twitter } from '../../assets/icons';
 import logo from '../../assets/images/logo.png';
 import '../../assets/scss/Login.scss';
 
@@ -9,27 +9,26 @@ class LoginPage extends React.Component {
     super(props);
 
     this.state = {
-      signinStateButton: 'active',
-      signupStateButton: 'inactive'
+      signinStateButton: "active",
+      signupStateButton: "inactive"
     };
   }
 
   onSigninToggle() {
     this.setState({
-      signinStateButton: 'active',
-      signupStateButton: 'inactive'
+      signinStateButton: "active",
+      signupStateButton: "inactive"
     });
   }
 
   onSignupToggle() {
     this.setState({
-      signinStateButton: 'inactive',
-      signupStateButton: 'active'
+      signinStateButton: "inactive",
+      signupStateButton: "active"
     });
   }
 
   render() {
-
     return (
       <div className="outer">
         <div className="innerHalf1">
@@ -43,10 +42,7 @@ class LoginPage extends React.Component {
           <div>
             <div className="innerHalfContent">
               <div className="socialDiv">
-                Continue with {' '}
-                <FaceBook />{' '}
-                <Twitter />{' '}
-                <Google />
+                Continue with <FaceBook /> <Twitter /> <Google />
               </div>
               <div className="signStr">Or</div>
               <SignupForm />

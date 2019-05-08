@@ -4,13 +4,12 @@ import InputBox from '../InputBox';
 import Button from '../SignupButton';
 
 const Signin = () => {
-
   const onChangeEmail = e => {
-    console.log(e.target.value)
+  
   };
 
   const onChangePassword = e => {
-    console.log(e.target.value);
+
   };
 
   return (
@@ -30,13 +29,12 @@ const Signin = () => {
           onChangeInput={e => onChangePassword(e)}
         />
         <div className="forgot">
-          <span onClick={() => alert('Open dialog')}>Forgot password?</span>
+          <span onClick={() => alert("Open dialog")}>Forgot password?</span>
         </div>
         <Button value="Signin" />
         <div className="other">
           <span>
-            Don’t have an account?{' '}
-            <Link to={'/register'}>Signup</Link>
+            Don’t have an account? <Link to={"/register"}>Signup</Link>
           </span>
         </div>
       </form>
