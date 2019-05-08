@@ -63,6 +63,9 @@ Array [
       </ul>
     </div>
   </div>,
+  <div
+    id="notification-wrapper"
+  />,
   <div>
     <div
       className="page-banner-image"
