@@ -59,7 +59,9 @@ export class Signup extends React.Component {
   };
 
   render() {
-    const { error } = this.state;
+    const {
+      email, username, password, confirmPassword, error,
+    } = this.state;
     return (
       <div className="outer">
         <div className="innerHalf1">
@@ -83,6 +85,10 @@ export class Signup extends React.Component {
               </div>
               <div className="signStr">Or</div>
               <SignupForm
+                email={email}
+                username={username}
+                password={password}
+                confirmPassword={confirmPassword}
                 error={error}
                 handleSubmit={this.handleSubmit}
                 onChange={this.onChange}

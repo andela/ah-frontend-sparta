@@ -42,8 +42,8 @@ describe('sign in container', () => {
     };
     event.preventDefault = jest.fn();
     instance.setState({
-      password: 1234,
-      confirmPassword: 123,
+      password: '1234',
+      confirmPassword: '123',
     });
     instance.handleSubmit(event);
   });

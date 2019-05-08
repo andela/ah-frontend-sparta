@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot test 1`] = `
+Array [
+  <div
+    className="signStr spacebottom"
+  >
+    Login to your account
+  </div>,
+  <form
+    onSubmit={[Function]}
+  >
+    <div
+      className="inputContain"
+    >
+      <input
+        className="input"
+        name="email"
+        onChange={[Function]}
+        placeholder="EMAIL"
+        type="email"
+        value=""
+      />
+    </div>
+    <div
+      className="inputContain"
+    >
+      <input
+        className="input"
+        name="password"
+        onChange={[Function]}
+        placeholder="PASSWORD"
+        type="password"
+        value=""
+      />
+    </div>
+    <div
+      className="forgot"
+    >
+      <span>
+        Forgot password?
+      </span>
+    </div>
+    <button
+      type="submit"
+    >
+      Signin
+    </button>
+    <div
+      className="other"
+    >
+      <span>
+        Don’t have an account?
+         
+      </span>
+    </div>
+  </form>,
+]
+`;
