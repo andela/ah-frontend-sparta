@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import GoogleLogin from 'react-google-login';
 import FacebookLogin from 'react-facebook-login';
-import { ClientId, google_social_url } from './GoogleConfig';
+import { ClientId, google_social_url} from './GoogleConfig';
 
 class Google extends Component {
 
