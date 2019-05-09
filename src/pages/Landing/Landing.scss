@@ -1,3 +1,4 @@
+@import '../../assets/scss/shared.scss';
 $heading: green;
 
 //h1 heading color
@@ -8,23 +9,16 @@ h1 {
 .flex-container {
   display: flex;
   background-color: DodgerBlue;
-  //justify-content: center;
-  //justify-content: flex-start;
-  //justify-content: flex-end;
+
   justify-content: center;
-  //justify-content: space-between;
   height: 100%;
   align-items: stretch;
 
 
-  //flex-direction: column;
-  //flex-direction: column-reverse;
   flex-direction: row;
   div {
-    //margin: 10px;
-    //padding: 20px;
-    width: 720px;
-    // border: 2px solid red;
+    width: rem(720);
+
   }
 
   .login-div {
@@ -34,7 +28,6 @@ h1 {
 
   .section_one{
     height: 52em;
-    // background-image: url("../../images/login_signup.jpg");
     background-size: cover;
   }
 }
@@ -44,16 +37,15 @@ h1 {
   background: rgb(0, 0, 0); /* Fallback color */
   background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
   color: #f1f1f1;
-  width: 340px;
-  height: 790px;
-  padding: 20px;
-  font-size: 25px;
+  width: rem(340);
+  height: rem(790);
+  padding: rem(20);
+  font-size: rem(25);
 
   div {
     margin-top: 3em;
-    width: 670px;
+    width: rem(670);
     text-align: center;
-    // border: 1px solid red;
   }
 }
 
@@ -64,11 +56,11 @@ h1 {
 
    div {
     background-color: #f1f1f1;
-    margin: 10px;
-    padding: 20px;
-    width: 10px;
-    height: 10px;
-    font-size: 30px;
+    margin: rem(10);
+    padding: rem(20);
+    width: rem(10);
+    height: rem(10);
+    font-size: rem(30);
    }
 }
 
@@ -85,9 +77,9 @@ h1 {
      flex-direction: column;
      div {
        background-color: #f1f1f1;
-       width: 340px;
-       height: 295px;
-       border: 2px solid red; }
+       width: rem(340);
+       height: rem(295);
+       border: rem(2) solid red; }
    }
 
 }
@@ -98,19 +90,19 @@ h1 {
 
     div  {
       background-color: red;
-      padding: 10px;
-      margin: 10px;
+      padding: rem(10);
+      margin: rem(10);
     }
 }
 
 .menu-container {
   background-color: #172439;
-  padding: 20px 0;
+  padding: rem(20) 0;
   display: flex;
 
   .menu {
-    border: 1px solid #fff;  /* For debugging */
-    width: 900px;
+    border: rem(1) solid #fff;  /* For debugging */
+    width: rem(900);
   }
 }
 
@@ -131,12 +123,12 @@ h1 {
 .nav{
   background: #172439;
   color: white;
-  height: 106px;
+  height: rem(106);
   font-family: sans-serif;
   display: flex;
   flex-wrap:wrap;
   align-items: center;
-  border-bottom: 1px solid gray;
+  border-bottom: rem(1) solid gray;
 
   .nav-logo {
     width: 20%;
@@ -145,8 +137,8 @@ h1 {
     text-align: center;
 
     img {
-      height: 70px;
-      width: 150px;
+      height: rem(70);
+      width: rem(150);
     }
   }
   .nav-menu {
@@ -161,9 +153,9 @@ h1 {
   .nav-menu {
     ul {
       li {
-        padding: 10px 20px;
+        padding: rem(10) rem(20);
         color:#ccc;
-        font-size: 20px;
+        font-size: rem(20);
         list-style-type: none;
         cursor: pointer; 
       }
@@ -196,11 +188,11 @@ h1 {
             outline: 0;
             border-width: 0 0 2px;
             border-color: #fff;
-            width: 200px;
-            height: 30px;
+            width: rem(200);
+            height: rem(30);
             background-color: #172439;
             color:#fff;
-            font-size: 16px;
+            font-size: rem(16);
           }
         }
       }
@@ -215,19 +207,19 @@ h1 {
 
 // Changing the width and height of an image in the landing page 
 .LandingImage {
-  height: 400px;
+  height: rem(400);
   width: 100%;
 }
 
 .wrapper {
   display: grid;
-  min-height: 100px;
+  min-height: rem(100);
   grid-template-columns: 2fr 1fr;
-  padding-top: 30px;
-  margin-left: 120px;
-  margin-right: 120px;
+  padding-top: rem(30);
+  margin-left: rem(120);
+  margin-right: rem(120);
   grid-column-gap: 3em;
-  grid-auto-rows:minmax(100px, auto);
+  grid-auto-rows:minmax(rem(100), auto);
 
   div {
       .sample-articles {
@@ -238,8 +230,8 @@ h1 {
   
     .article-image {
       img {
-        height: 140px;
-        width: 214px;
+        height: rem(140);
+        width: rem(214);
       }
    }
     .sample_article_start {
@@ -257,7 +249,7 @@ h1 {
       font-family: Roboto;
       font-style: normal;
       font-weight: bold;
-      font-size: 25px;
+      font-size: rem(25);
       line-height: 117%;
       text-align: center;
       letter-spacing: 0.03em;
@@ -268,7 +260,7 @@ h1 {
         font-family: Roboto;
         font-style: normal;
         font-weight: bold;
-        font-size: 20px;
+        font-size: rem(20);
         letter-spacing: 0.03em;
         color: #000000;
         text-align: justify;
@@ -277,7 +269,7 @@ h1 {
       font-family: Roboto;
       font-style: normal;
       font-weight: normal;
-      font-size: 18px;
+      font-size: rem(18);
       letter-spacing: 0.03em;
       text-align: justify;
       color: #000000;
@@ -286,7 +278,7 @@ h1 {
       font-family: Roboto;
       font-style: normal;
       font-weight: normal;
-      font-size: 16px;
+      font-size: rem(16);
       line-height: 117%;
       letter-spacing: 0.03em;
       text-align: justify;
@@ -297,15 +289,15 @@ h1 {
 
 .trending {
   display: grid;
-  grid-template-columns:60% 10%;
-  grid-auto-rows: 6em;
-  padding-left: 120px;
+  grid-template-columns:80% 10%;
+  grid-auto-rows: 4em;
+  padding-left: rem(10);
 
   div {
 
     img{
-      height: 20px;
-      width: 20px;
+      height: rem(20);
+      width: rem(20);
     }
   }
 }
@@ -313,7 +305,7 @@ h1 {
 .book-mark-holder {
    text-align: center;
    vertical-align: middle;
-   line-height: 100px;
+   line-height: rem(100);
 }
 
 
@@ -328,24 +320,24 @@ h1 {
    .wrapper {
         display: grid;
         grid-template-rows: 60% 50%;
-        padding-top: 30px;
-        margin-left: 40px;
-        margin-right: 40px;
+        padding-top: rem(30);
+        margin-left: rem(40);
+        margin-right: rem(40);
         grid-column-gap: 3em;
-        grid-auto-rows: minmax(100px, auto);
+        grid-auto-rows: minmax(rem(100), auto);
         grid-template-columns: none !important;
 
       div {
         .sample-articles {
-          padding-top:10px;
+          padding-top:rem(10);
           display: grid !important;
           grid-template-rows: 50% !important;
-          grid-auto-columns: minmax(300px, auto);
+          grid-auto-columns: minmax(rem(300px), auto);
           grid-template-columns: none !important;
 
           .article-image img {
-            height: 180px;
-            width: 285px;
+            height: rem(180);
+            width: rem(285);
            }
            .trending-articles {
              h4 {
@@ -375,7 +367,7 @@ h1 {
 
      div {
        text-align: center;
-       padding-top: 20px;
+       padding-top: rem(20);
      
        a {
          text-decoration: none;
@@ -386,13 +378,13 @@ h1 {
        form {
         input {
           outline: 0;
-          border-width: 0 0 2px;
+          border-width: 0 0 rem(2);
           border-color: #fff;
-          width: 200px;
-          height: 30px;
+          width: rem(200);
+          height: rem(30);
           background-color: #172439;
           color:#fff;
-          font-size: 16px;
+          font-size: rem(16);
         }
       }
      
@@ -404,9 +396,8 @@ h1 {
      height: auto;
 
      .nav-logo {
-       padding-top: 70px;
-       height:200px;
-      //  background-color: red;
+       padding-top: rem(70);
+       height:rem(200);
        width:100%;
     
      }
@@ -423,9 +414,9 @@ h1 {
          li {
            display: none;
            width: 20%;
-           padding: 10px 5px;
+           padding: rem(10) rem(5);
            text-align: center;
-           font-size: 16px;
+           font-size: rem(16);
          }
        }
      }
@@ -442,10 +433,5 @@ h1 {
   
  
 }
-
-
-
-
-
 
 // navbar css
