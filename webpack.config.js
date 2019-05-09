@@ -8,24 +8,27 @@ module.exports = {
     path: path.join(__dirname, '/dist'),
     filename: 'index_bundle.js',
   },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ['babel-loader', 'eslint-loader'],
       },
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"],
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.svg$/,
-        loader: 'svg-inline-loader?classPrefix'
+        loader: 'svg-inline-loader?classPrefix',
       },
       {
         test: /\.(jpe?g|png|gif)$/,
@@ -44,7 +47,7 @@ module.exports = {
       template: './src/index.html',
     }),
   ],
-  devServer:{
-    historyApiFallback:true,
-}
+  devServer: {
+    historyApiFallback: true,
+  },
 };
