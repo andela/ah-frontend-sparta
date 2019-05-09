@@ -6,7 +6,7 @@
   "scripts": {
     "start:dev": "webpack-dev-server --mode development --open --hot",
     "start": "node server.js",
-    "build": "webpack --mode production",
+    "build": "webpack --mode=production",
     "lint": "eslint src --fix",
     "test": "jest",
     "test:watch": "jest --watch",

@@ -1,16 +1,16 @@
 import * as types from './types';
 
-export const usernameChanged = username => {
+export const usernameChanged = () => {
   return {
     type: types.USERNAME_CHANGED,
-    payload: username
+    
   };
 };
 
-export const emailChanged = email => {
+export const emailChanged = () => {
   return {
     type: types.EMAIL_CHANGED,
-    payload: email
+    
   };
 };
 
@@ -30,7 +30,7 @@ export const confPasswordChanged = password => {
 
 export const signUpUser = user => {
   return dispatch => {
-    const { username, email, password, confirm_password } = user;
+    const { password, confirm_password } = user;
 
     if (password !== confirm_password) {
       dispatch({ type: types.ERROR, payload: 'Your passwords do not match' });
