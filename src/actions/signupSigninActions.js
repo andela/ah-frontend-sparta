@@ -1,6 +1,7 @@
 import { notify } from 'react-notify-toast';
 import axios from 'axios';
 
+<<<<<<< HEAD
 export const signUpUser = (user, history) => () => {
   axios
     .post(`${process.env.baseURL}/users/register/`, user)
@@ -31,4 +32,42 @@ export const signInUser = (user, history) => () => {
         notify.show(errorMessage, 'error', 4000);
       }
     });
+=======
+export const usernameChanged = () => {
+  return {
+    type: types.USERNAME_CHANGED,
+    
+  };
+};
+
+export const emailChanged = () => {
+  return {
+    type: types.EMAIL_CHANGED,
+    
+  };
+};
+
+export const passwordChanged = password => {
+  return {
+    type: types.PASSWORD_CHANGED,
+    payload: password
+  };
+};
+
+export const confPasswordChanged = password => {
+  return {
+    type: types.CONF_PASSWORD_CHANGED,
+    payload: password
+  };
+};
+
+export const signUpUser = user => {
+  return dispatch => {
+    const { password, confirm_password } = user;
+
+    if (password !== confirm_password) {
+      dispatch({ type: types.ERROR, payload: 'Your passwords do not match' });
+    }
+  };
+>>>>>>> Adding a node version for heroku
 };
