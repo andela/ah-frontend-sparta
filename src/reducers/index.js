@@ -8,6 +8,7 @@ import profileReducer from './profileReducer';
 export default combineReducers({
   auth: authReducer,
   articles: articlesReducer,
+  article: articlesReducer,
   auth_fb: facebookReducer,
   resetReducer,
   profile: profileReducer,

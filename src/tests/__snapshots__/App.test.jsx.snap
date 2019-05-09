@@ -31,6 +31,15 @@ Array [
           </form>
         </li>
         <li
+          className="nav-item"
+        >
+          <a
+            href="/article/create"
+          >
+            Add Article
+          </a>
+        </li>
+        <li
           className="nav-item dropdown"
         >
           <a

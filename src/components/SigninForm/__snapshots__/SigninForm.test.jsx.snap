@@ -17,6 +17,11 @@ Array [
         name="email"
         onChange={[Function]}
         placeholder="EMAIL"
+        style={
+          Object {
+            "width": "80%",
+          }
+        }
         type="email"
         value=""
       />
@@ -30,6 +35,11 @@ Array [
         name="password"
         onChange={[Function]}
         placeholder="PASSWORD"
+        style={
+          Object {
+            "width": "80%",
+          }
+        }
         type="password"
         value=""
       />

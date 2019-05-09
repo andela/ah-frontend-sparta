@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import ArticleContainer from '../../components/Articles/ArticleContainer';
 import LandingImage from '../../assets/images/landing_image.jpg';
-import fetchArticles from '../../actions/articlesActions';
+import { fetchArticles } from '../../actions/articlesActions';
 
 import './Landing.scss';
 
@@ -48,7 +48,7 @@ Landing.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  articles: state.articles,
+  articles: state.article.articles,
 });
 
 export default connect(mapStateToProps,

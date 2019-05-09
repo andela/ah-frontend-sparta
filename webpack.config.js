@@ -38,6 +38,12 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
+        test: /\.less$/,
+        loaders: [
+          'style=loader', 'css-loader', 'less-loader',
+        ],
+      },
+      {
         test: /\.svg$/,
         loader: 'svg-inline-loader?classPrefix',
       },
