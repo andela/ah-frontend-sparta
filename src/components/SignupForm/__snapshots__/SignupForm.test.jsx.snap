@@ -15,6 +15,7 @@ exports[`snapshot test 1`] = `
     >
       <input
         className="input"
+        id="loginInput"
         name="username"
         onChange={[Function]}
         placeholder="USERNAME"
@@ -27,6 +28,7 @@ exports[`snapshot test 1`] = `
     >
       <input
         className="input"
+        id="loginInput"
         name="email"
         onChange={[Function]}
         placeholder="EMAIL"
@@ -39,6 +41,7 @@ exports[`snapshot test 1`] = `
     >
       <input
         className="input"
+        id="loginInput"
         name="password"
         onChange={[Function]}
         placeholder="PASSWORD"
@@ -51,6 +54,7 @@ exports[`snapshot test 1`] = `
     >
       <input
         className="input"
+        id="loginInput"
         name="confirmPassword"
         onChange={[Function]}
         placeholder="CONFIRM PASSWORD"
@@ -60,6 +64,8 @@ exports[`snapshot test 1`] = `
     </div>
     
     <button
+      id="loginButton"
+      onClick={[Function]}
       type="submit"
     >
       Signup

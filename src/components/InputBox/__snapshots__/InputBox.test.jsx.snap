@@ -6,6 +6,7 @@ exports[`snapshot test 1`] = `
 >
   <input
     className="input"
+    id="loginInput"
     name=""
     onChange={[Function]}
     placeholder=""
