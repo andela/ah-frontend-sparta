@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sample Articles Component Should render without crashing 1`] = `
+<div>
+  <div>
+    <div
+      className="sample-articles"
+    >
+      <div
+        className="article-image"
+      >
+        <img
+          alt="Article"
+          src={Object {}}
+        />
+      </div>
+      <div
+        className="trending-articles"
+      >
+        <h4>
+          Post one
+        </h4>
+        <h6
+          className="sample_article_start"
+        >
+          too long a story
+        </h6>
+        <p
+          className="author_name"
+        >
+          Created By
+           
+          <b>
+            rogha
+          </b>
+        </p>
+        <h6>
+          April 18, 2019
+           
+          -
+          less than a minute read
+        </h6>
+      </div>
+    </div>
+  </div>
+</div>
+`;
