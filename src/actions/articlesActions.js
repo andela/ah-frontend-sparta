@@ -1,5 +1,5 @@
 import axios from 'axios';
-import GET_ARTICLES from './types';
+import { GET_ARTICLES } from './types';
 
 const fetchArticles = () => dispatch => (
   axios.get(`${process.env.baseURL}/articles/`)

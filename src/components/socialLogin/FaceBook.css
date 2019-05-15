@@ -1,0 +1,15 @@
+button.kep-login-facebook {
+    background-color: #14243B;
+    font-size: 3.125rem;
+    border: none;
+}
+
+.fa-facebook {
+    font-size: 2.1875rem;
+    border-radius: 1.25rem;
+    color: #28589c;
+}
+
+button.kep-login-facebook {
+    padding:0;
+}
