@@ -1,0 +1,76 @@
+@import '../../assets/scss/shared.scss';
+
+.viewProfile {
+	font-size: rem(18);
+
+	.username {
+		font-size: rem(50);
+		margin-top: 0;
+		padding-top: 0;
+		color: #B0B0B0;
+	}
+
+	.involvement,
+	.name,
+	.email {
+		margin-top: rem(15);
+		margin-bottom: rem(15);
+
+		.number {
+			font-weight: bold
+		}
+	}
+
+	.name {
+		font-weight: bold;
+	}
+
+	.email {
+		color: #283560;
+		text-decoration: underline;
+		font-weight: bold;
+	}
+
+	.articles,
+	.followers,
+	.following {
+		display: inline-block;
+		margin-right: rem(20);
+	}
+
+	.bio {
+		padding-left: 0;
+	}
+
+	.editProfileButtonWrapper {
+		margin-top: rem(20);
+
+		.editProfileButton {
+			font-size: rem(14);
+			padding: rem(5) rem(10);
+			border-radius: 5px;
+			margin-left: 27px;
+			font-weight: bold;
+			color: #283560;
+			border: rem(1) solid #283560;
+
+			&:hover {
+				text-decoration: none;
+				color: #283560;
+			}
+		}
+	}
+}
+
+
+.imageContainer {
+	width: rem(150);
+	height: rem(150);
+	border-radius: rem(150);
+	overflow: hidden;
+
+	.image {
+		width: 100%;
+		margin-bottom: rem(30);
+  }
+}

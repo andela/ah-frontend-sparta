@@ -36,8 +36,8 @@
     "enzyme-adapter-react-16": "^1.12.1",
     "express": "^4.16.4",
     "file-loader": "^3.0.1",
+    "firebase": "^6.0.2",
     "moment": "^2.24.0",
-    "moxios": "^0.4.0",
     "node-sass": "^4.12.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
@@ -77,7 +77,7 @@
     "moxios": "^0.4.0",
     "react-test-renderer": "^16.8.6",
     "svg-inline-loader": "^0.8.0",
-    "webpack": "^4.30.0",
+    "webpack": "^2.7.0",
     "webpack-cli": "^3.3.1",
     "webpack-dev-server": "^3.3.1"
   },

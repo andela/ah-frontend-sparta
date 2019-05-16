@@ -4,8 +4,8 @@ describe('signupSigninReducer', () => {
   it('should return default state', () => {
     expect(
       reducer([], {
-        type: 'default'
-      })
+        type: 'default',
+      }),
     ).toEqual([]);
   });
 });

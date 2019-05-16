@@ -2,6 +2,8 @@
 
 exports[`snapshot test 1`] = `
 <button
+  id="loginButton"
+  onClick={[Function]}
   type="submit"
 >
   

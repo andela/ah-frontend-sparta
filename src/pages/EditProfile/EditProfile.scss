@@ -1,0 +1,57 @@
+@import '../../assets/scss/shared.scss';
+
+.container {
+  margin-top: rem(50);
+
+  .changePic {
+    label {
+      font-size: 1em;
+      color: #172439;
+      display: inline-block;
+      cursor: pointer;
+      margin-top: rem(20);
+
+      .inputFile {
+        width: (0.1)rem;
+        height: (0.1)rem;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+        cursor: pointer;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+  }
+
+  .form {
+    margin-left: rem(20);
+
+    #bio {
+      font-size: rem(15);
+      padding: rem(5);
+      border: rem(1) solid #283560;
+      border-radius: rem(5);
+      margin-right: rem(20);
+    }
+
+    .updateButton {
+      padding: rem(10) rem(40);
+      font-size: rem(12);
+      color: white;
+      border: none;
+      outline: none;
+      background-color: #3C5A99;
+      border-radius: rem(5);
+      align-self: right;
+    }
+  }
+}
+
+.details {
+  padding-left: rem(50);
+}

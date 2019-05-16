@@ -1,0 +1,12 @@
+@import '../../assets/scss/shared.scss';
+
+.profileInputContainer {
+  margin-bottom: rem(15);
+
+  .profileInput {
+    font-size: rem(15);
+    padding: rem(5);
+    border: rem(1) solid #283560;
+    border-radius: rem(5);
+  }
+}

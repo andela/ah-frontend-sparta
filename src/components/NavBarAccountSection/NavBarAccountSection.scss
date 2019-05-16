@@ -1,0 +1,6 @@
+.logoutButton, .dropdown-item {
+  &:active {
+		outline: 1px solid transparent;
+		background-color: #ccc;
+	}
+}
