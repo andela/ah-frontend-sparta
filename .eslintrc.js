@@ -22,7 +22,9 @@ module.exports = {
 		"jest/no-focused-tests": "error",
 		"jest/no-identical-title": "error",
 		"jest/prefer-to-have-length": "warn",
-		"jest/valid-expect": "error"
+		"jest/valid-expect": "error",
+		"import/prefer-default-export": "off",
+		"import/no-named-as-default":"off",
 	},
 	"parser": "babel-eslint",
 };

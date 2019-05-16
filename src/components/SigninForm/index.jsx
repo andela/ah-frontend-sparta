@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import InputBox from '../InputBox';
 import Button from '../SignupButton';
+import ResetPasswordContainer from
+  '../../pages/PasswordReset/ResetPasswordContainer';
 
 const SigninForm = ({
   email, password, handleSubmit, onChange,
@@ -25,7 +27,10 @@ const SigninForm = ({
         onChangeInput={onChange}
       />
       <div className="forgot">
-        <span>Forgot password?</span>
+        <span data-toggle="modal" data-target="#forgotPassword">
+            Forgot password?
+        </span>
+        <ResetPasswordContainer />
       </div>
       <Button value="Signin" />
       <div className="other">

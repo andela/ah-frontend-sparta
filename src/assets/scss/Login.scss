@@ -11,7 +11,7 @@ body {
     flex-direction: row;
     display: flex;
 
-    .innerHalf1 {
+    .innerHalf1, .inner1{
       width: 65%;
       height: 100%;
       background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
@@ -31,14 +31,14 @@ body {
         height: 8%;
       }
 
-      .intro {
+      .intro, .message{
         margin-top: rem(12);
         font-size: rem(20);
         font-family: 'Courier New', Courier, monospace;
       }
     }
     
-    .innerHalf2 {
+    .innerHalf2, .inner2 {
       width: 35%;
       height: 100%;
       background-color: $primary-color;
