@@ -11,7 +11,7 @@ const SigninForm = ({
 }) => (
   <React.Fragment>
     <div className="signStr spacebottom">Login to your account</div>
-    <form onSubmit={handleSubmit}>
+    <form>
       <InputBox
         type="email"
         name="email"
@@ -32,7 +32,7 @@ const SigninForm = ({
         </span>
         <ResetPasswordContainer />
       </div>
-      <Button value="Signin" />
+      <Button value="Signin" handleSubmit={handleSubmit} />
       <div className="other">
         <span>
           Don’t have an account?

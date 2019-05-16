@@ -8,6 +8,7 @@ const InputBox = ({
 }) => (
   <div className="inputContain">
     <input
+      id="loginInput"
       type={type}
       value={value}
       name={name}

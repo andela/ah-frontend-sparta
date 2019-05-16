@@ -7,14 +7,13 @@ Array [
   >
     Login to your account
   </div>,
-  <form
-    onSubmit={[Function]}
-  >
+  <form>
     <div
       className="inputContain"
     >
       <input
         className="input"
+        id="loginInput"
         name="email"
         onChange={[Function]}
         placeholder="EMAIL"
@@ -27,6 +26,7 @@ Array [
     >
       <input
         className="input"
+        id="loginInput"
         name="password"
         onChange={[Function]}
         placeholder="PASSWORD"
@@ -135,6 +135,8 @@ Array [
       </div>
     </div>
     <button
+      id="loginButton"
+      onClick={[Function]}
       type="submit"
     >
       Signin
