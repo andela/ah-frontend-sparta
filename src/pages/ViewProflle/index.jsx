@@ -27,8 +27,8 @@ export class ViewProfile extends Component {
     const {
       profile: {
         username,
-        followers_no,
-        following_no,
+        followersNo_,
+        followingNo_,
         firstname,
         lastname,
         bio,
@@ -59,12 +59,12 @@ export class ViewProfile extends Component {
                 Posts
               </div>
               <div className="followers">
-                <span className="number">{followers_no}</span>
+                <span className="number">{followersNo_}</span>
                 {' '}
                 Followers
               </div>
               <div className="following">
-                <span className="number">{following_no}</span>
+                <span className="number">{followingNo_}</span>
                 {' '}
                 Following
               </div>

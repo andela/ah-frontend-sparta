@@ -6,3 +6,4 @@ export const PASSWORD_RESET_FAIL = 'PASSWORD_RESET_FAIL';
 export const CHANGE_PASSWORD = 'CHANGE_PASSWORD';
 export const USER = 'USER';
 export const ERROR = 'ERROR';
+export const USER_AUTHENTICATED = 'USER_AUTHENTICATED';

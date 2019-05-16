@@ -5,6 +5,7 @@ import loginWithFb from '../../../actions/facebookActions';
 import {
   IS_AUTHENTICATING_WITH_FB_STARTED,
   FB_AUTH_DONE_SUCCESS,
+  USER_AUTHENTICATED,
 } from '../../../actions/types';
 
 const middlewares = [thunk];
@@ -34,6 +35,10 @@ describe('authentication process', () => {
     });
     const expectedActions = [
       { type: IS_AUTHENTICATING_WITH_FB_STARTED },
+      {
+        type: USER_AUTHENTICATED,
+        payload: { userAuthenticated: true },
+      },
       {
         payload: 'test_token',
         type: FB_AUTH_DONE_SUCCESS,

@@ -1,20 +1,18 @@
 import axios from '../helpers/axiosInstance';
 import { ERROR, USER } from './types';
 
-export const fetchProfileActions = username => (dispatch) => {
-  return axios
-    .get(`${process.env.baseURL}/profiles/${username}`)
-    .then((response) => {
-      dispatch({ type: USER, payload: response.data.profile });
-      localStorage.setItem('username', response.data.user.username);
-    })
-    .catch(() => {
-      dispatch({
-        type: ERROR,
-        payload: 'Can not fetch your data, please login again',
-      });
+export const fetchProfileActions = username => dispatch => axios
+  .get(`${process.env.baseURL}/profiles/${username}`)
+  .then((response) => {
+    dispatch({ type: USER, payload: response.data.profile });
+    localStorage.setItem('username', response.data.user.username);
+  })
+  .catch(() => {
+    dispatch({
+      type: ERROR,
+      payload: 'Can not fetch your data, please login again',
     });
-};
+  });
 
 export const updateProfileActions = (updatedProfile, history) => (dispatch) => {
   const username = localStorage.getItem('username');

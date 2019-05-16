@@ -1,19 +1,17 @@
 import { notify } from 'react-notify-toast';
 import axios from 'axios';
 
-export const signUpUser = (user, history) => () => {
-  return axios
-    .post(`${process.env.baseURL}/users/register/`, user)
-    .then(() => {
-      notify.show('Registration successful', 'success', 4000);
-      history.push('/login');
-    })
-    .catch((error) => {
-      const errorObject = error.response.data.errors;
-      const errorMessage = errorObject[Object.keys(errorObject)[0]][0];
-      notify.show(errorMessage, 'error', 4000);
-    });
-};
+export const signUpUser = (user, history) => () => axios
+  .post(`${process.env.baseURL}/users/register/`, user)
+  .then(() => {
+    notify.show('Registration successful', 'success', 4000);
+    history.push('/login');
+  })
+  .catch((error) => {
+    const errorObject = error.response.data.errors;
+    const errorMessage = errorObject[Object.keys(errorObject)[0]][0];
+    notify.show(errorMessage, 'error', 4000);
+  });
 
 export const signInUser = (user, history) => () => {
   axios
