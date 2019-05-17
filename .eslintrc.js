@@ -14,6 +14,7 @@ module.exports = {
 	},
 	"plugins": ["jest", "react"],
 	"rules": {
+		"camelcase":"off",
 		"no-param-reassign":"off",
 		"max-len": [1, 80, 2],
 		"react/jsx-uses-react":1,

@@ -65,4 +65,7 @@ PasswordReset.defaultProps = {
   changePassword: () => { },
   match: () => { },
 };
-export default connect(null, { changePassword: ChangePasswordActions })(PasswordReset);
+export default connect(null,
+  {
+    changePassword: ChangePasswordActions,
+  })(PasswordReset);

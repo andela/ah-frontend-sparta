@@ -11,7 +11,7 @@ export class ViewProfile extends Component {
 
     this.state = {
       email: '',
-      username: '',
+      // username: '',
     };
   }
 
@@ -92,6 +92,7 @@ export default connect(
 ViewProfile.propTypes = {
   profile: PropTypes.objectOf,
   fetchProfile: PropTypes.func,
+
 };
 
 ViewProfile.defaultProps = {

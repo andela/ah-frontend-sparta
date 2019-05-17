@@ -27,7 +27,11 @@ export const ChangePasswordActions = (
       } else if (error.response.data.errors.password) {
         notification(error.response.data.errors.password, 'error', 5000);
       } else {
-        notification(error.response.data.errors.confirm_password, 'error', 5000);
+        notification(
+          error.response.data.errors.confirm_password,
+          'error',
+          5000,
+        );
       }
     });
 };

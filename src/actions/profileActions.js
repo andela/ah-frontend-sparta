@@ -1,8 +1,8 @@
 import axios from '../helpers/axiosInstance';
 import { ERROR, USER } from './types';
 
-export const fetchProfileActions = username => (dispatch) => {
-  return axios
+export const fetchProfileActions = username => dispatch => (
+  axios
     .get(`${process.env.baseURL}/profiles/${username}`)
     .then((response) => {
       dispatch({ type: USER, payload: response.data.profile });
@@ -13,8 +13,8 @@ export const fetchProfileActions = username => (dispatch) => {
         type: ERROR,
         payload: 'Can not fetch your data, please login again',
       });
-    });
-};
+    })
+);
 
 export const updateProfileActions = (updatedProfile, history) => (dispatch) => {
   const username = localStorage.getItem('username');
@@ -40,7 +40,6 @@ export const saveImageActions = (url, username) => (dispatch) => {
     .put(`${process.env.baseURL}/profiles/${username}`, data)
     .then(() => {
       localStorage.setItem('image', url);
-      location.reload();
     })
     .catch(() => {
       dispatch({

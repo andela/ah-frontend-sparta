@@ -36,7 +36,11 @@ const ResetPassword = ({ email, onChange, handleClick }) => (
                   className="col-form-label form_label"
                 >
                   <h5>Forgotten Password?</h5>
-                  <h6 className="paragraph-infor">Please enter your Email address. A link with instructions will be sent to you to reset your Password</h6>
+                  <h6 className="paragraph-infor">
+                    Please enter your Email address.
+                    A link with instructions will be
+                    sent to you to reset your Password
+                  </h6>
                   <input
                     type="email"
                     className="form-control"

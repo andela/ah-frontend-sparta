@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 import './NavBarAccountSection.scss';
 
 const NavBarAccountSection = ({ sectionType, dropdownItems, logout }) => (
@@ -40,3 +40,15 @@ const NavBarAccountSection = ({ sectionType, dropdownItems, logout }) => (
 );
 
 export default NavBarAccountSection;
+
+NavBarAccountSection.propTypes = {
+  sectionType: PropTypes.string,
+  dropdownItems: PropTypes.arrayOf(PropTypes.string),
+  logout: PropTypes.func,
+};
+
+NavBarAccountSection.defaultProps = {
+  sectionType: '',
+  dropdownItems: [],
+  logout: () => {},
+};
