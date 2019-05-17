@@ -19,6 +19,7 @@ module.exports = {
 		" no-restricted-globals":"off",
 		"react/prop-types":"off",
 		"no-unused-vars":"off",
+		"no-restricted-globals":"off",
 		"max-len": [1, 80, 2],
 		"no- param-reassign":"off",
 		"react/destructuring-assignment":"off",

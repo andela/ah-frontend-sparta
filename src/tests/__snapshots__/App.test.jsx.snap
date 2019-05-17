@@ -22,23 +22,6 @@ Array [
       className="nav-menu"
     >
       <ul>
-        <li>
-          <form>
-            <input
-              placeholder="SEARCH"
-              type="text"
-            />
-          </form>
-        </li>
-        <li
-          className="nav-item"
-        >
-          <a
-            href="/article/create"
-          >
-            Add Article
-          </a>
-        </li>
         <li
           className="nav-item dropdown"
         >

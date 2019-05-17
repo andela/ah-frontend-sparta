@@ -8,6 +8,7 @@ const createArticles = (
 
   {
     tags,
+    suggestions,
     handleDelete,
     handleAddition,
     delimiters,
@@ -109,6 +110,7 @@ const createArticles = (
               handleDelete={handleDelete}
               handleAddition={handleAddition}
               delimiters={delimiters}
+              suggestions={suggestions}
             />
             <br />
             <br />

@@ -1,7 +1,7 @@
 import React from 'react';
 import './article.scss';
 
-const deleteArticleModal = () => (
+const deleteArticleModal = ({ title, slug, deleteAnArticle }) => (
   <div
     className="modal fade"
     id="deleteArticleModal"
@@ -20,7 +20,7 @@ const deleteArticleModal = () => (
             className="modal-title"
             id="exampleModalLabel"
           >
-          Modal title
+          Delete Article
           </h5>
           <button
             type="button"
@@ -32,13 +32,20 @@ const deleteArticleModal = () => (
           </button>
         </div>
         <div className="modal-body">
-          Delete Article
+          Are you sure , you want to delete ?
+          <br />
+          <b className="delete-article-title">
+            Title :
+            {' '}
+            {title}
+          </b>
         </div>
         <div className="modal-footer">
           <button
             type="button"
             className="btn btn-success"
             data-dismiss="modal"
+            id={`cancelModal${slug}`}
           >
           Cancel
 
@@ -46,6 +53,9 @@ const deleteArticleModal = () => (
           <button
             type="button"
             className="btn btn-danger"
+            onClick={() => {
+              deleteAnArticle(slug);
+            }}
           >
           Ok
           </button>

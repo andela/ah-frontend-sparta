@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import countries from './countries';
+import TagList from '../../helpers/TagList';
 import CreateArticles from '../../components/Articles/createArticles';
 import { postArticle } from '../../actions/articlesActions';
 import getArticleTags from '../../helpers/handleArticleTags';
@@ -35,13 +35,13 @@ export class Articles extends React.Component {
 
   onSubmit = (event) => {
     event.preventDefault();
-    const { addArticle, history } = this.props;
+    const { addArticle } = this.props;
     const articleTags = this.state.tags;
     const tags = getArticleTags(articleTags);
     const { title, description, body } = this.state;
     addArticle({
       title, description, body, tags,
-    }, history);
+    }, this.props);
   }
 
 
@@ -66,15 +66,15 @@ export class Articles extends React.Component {
   render() {
     const { title, description, body } = this.state;
     const { tags } = this.state;
-    const suggestedContries = countries.map(country => ({
-      id: country,
-      text: country,
+    const suggestedTags = TagList.map(tag => ({
+      id: tag,
+      text: tag,
     }));
     return (
       <div>
         <CreateArticles
           tags={tags}
-          suggestions={suggestedContries}
+          suggestions={suggestedTags}
           delimiters={delimiters}
           handleDelete={this.handleDelete}
           handleAddition={this.handleAddition}

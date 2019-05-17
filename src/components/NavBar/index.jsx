@@ -27,14 +27,21 @@ export class Navbar extends Component {
         </div>
         <div className="nav-menu">
           <ul>
-            <li>
-              <form>
-                <input type="text" placeholder="SEARCH" />
-              </form>
-            </li>
-            <li className="nav-item">
-              <a href="/article/create">Add Article</a>
-            </li>
+            {localStorage.getItem('userAuthenticated')
+              && (
+              <ul>
+                <li>
+                  <form>
+                    <input type="text" placeholder="SEARCH" />
+                  </form>
+                </li>
+                <li className="nav-item">
+                  <a href="/article/create">Add Article</a>
+                </li>
+              </ul>
+              )
+          }
+
             {
               <NavBarAccountSection
                 sectionType={token ? 'Profile' : 'Accounts'}
