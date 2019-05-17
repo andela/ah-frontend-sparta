@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot test 1`] = `
+<div
+  className="profileInputContainer"
+>
+  <div
+    className="label"
+  >
+    <span>
+      :
+    </span>
+  </div>
+  <input
+    className="col-6 profileInput"
+    defaultValue=""
+    disabled={false}
+    id=""
+    onChange={[Function]}
+    type=""
+  />
+</div>
+`;

@@ -13,6 +13,7 @@ export class Navbar extends Component {
     localStorage.removeItem('accessToken');
     localStorage.removeItem('email');
     localStorage.removeItem('username');
+    localStorage.removeItem('userAuthenticated');
     history.push('/login');
   }
 

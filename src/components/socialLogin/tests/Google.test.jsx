@@ -6,7 +6,14 @@ import SignUpPage from '../../../pages/Signup/index';
 
 describe('Google sign in', () => {
   it('should render without crashing', () => {
-    const wrapper = renderer.create(<GoogleButton />);
+    const responseGoogle = {
+      user_token: {
+        auth_token: 'test_token',
+      },
+    };
+    const wrapper = renderer.create(
+      <GoogleButton responseGoogle={responseGoogle} />,
+    );
     expect(wrapper.toJSON()).toMatchSnapshot();
   });
 });
