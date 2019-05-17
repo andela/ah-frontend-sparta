@@ -1,11 +1,13 @@
 import {
   IS_AUTHENTICATING_WITH_FB_STARTED,
   FB_AUTH_DONE_SUCCESS,
+  USER_AUTHENTICATED,
 } from '../actions/types';
 
 const initialState = {
   FaceBookToken: null,
   isAuthenticating: false,
+  userAuthenticated: false,
 };
 
 export default function (state = initialState, action) {
@@ -20,6 +22,11 @@ export default function (state = initialState, action) {
         ...state,
         FaceBookToken: action.payload,
         isAuthenticating: false,
+      };
+    case USER_AUTHENTICATED:
+      return {
+        ...state,
+        userAuthenticated: action.payload.userAuthenticated,
       };
     default:
       return state;

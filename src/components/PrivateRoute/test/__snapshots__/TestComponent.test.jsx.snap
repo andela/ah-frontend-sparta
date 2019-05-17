@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`private componet should render successfully 1`] = `
+<h2>
+  Hello this is a test component
+</h2>
+`;
