@@ -1,4 +1,3 @@
-
 import React from 'react';
 import PropTypes, { shape } from 'prop-types';
 import ArticleImage from '../../assets/images/article_image.jpeg';
