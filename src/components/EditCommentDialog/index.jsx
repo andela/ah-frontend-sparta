@@ -1,7 +1,9 @@
 import React from 'react';
 import './EditCommentDialog.scss';
 
-const EditCommentDialog = ({ comment, updateComment, onChangeComment, id }) => (
+const EditCommentDialog = ({
+  comment, updateComment, onChangeComment, id,
+}) => (
   <div
     className="modal fade"
     id="exampleModalCenter"

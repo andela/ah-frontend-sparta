@@ -8,14 +8,15 @@
   },
   "scripts": {
     "start:dev": "webpack-dev-server --mode development --open --hot --https",
-    "start": "node server.js",
-    "build": "webpack --mode production",
+    "start": "serve -s dist/",
+    "build": "webpack --mode production --open --hot",
     "lint": "eslint src --fix",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --collectCoverage -u",
     "scss": "node-sass scss/style.scss assets/css/style.css --watch",
-    "toolbox": "react-toolbox-themr"
+    "heroku-prebuild": "npm install",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,7 @@
     "babel-jest": "^24.7.1",
     "core-js": "^3.0.1",
     "css-loader": "^2.1.1",
+    "dotenv-webpack": "^1.7.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.12.1",
     "express": "^4.16.4",
@@ -59,6 +61,7 @@
     "redux-mock-store": "^1.5.3",
     "redux-thunk": "^2.3.0",
     "sass-loader": "^7.1.0",
+    "serve": "^11.0.0",
     "style-loader": "^0.23.1"
   },
   "devDependencies": {
@@ -83,9 +86,9 @@
     "moxios": "^0.4.0",
     "react-test-renderer": "^16.8.6",
     "svg-inline-loader": "^0.8.0",
-    "webpack": "^4.30.0",
-    "webpack-cli": "^3.3.1",
-    "webpack-dev-server": "^3.3.1"
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.1.14"
   },
   "jest": {
     "snapshotSerializers": [

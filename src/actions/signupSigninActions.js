@@ -1,8 +1,9 @@
 import { notify } from 'react-notify-toast';
 import axios from 'axios';
 
+const { baseURL } = process.env;
 export const signUpUser = (user, history) => axios
-  .post(`${process.env.baseURL}/users/register/`, user)
+  .post(`${baseURL}/users/register/`, user)
   .then(() => {
     notify.show('Registration successful', 'success', 4000);
     history.push('/login');
@@ -16,7 +17,7 @@ export const signUpUser = (user, history) => axios
   });
 
 export const signInUser = (user, history) => axios
-  .post(`${process.env.baseURL}/users/login/`, user)
+  .post(`${baseURL}/users/login/`, user)
   .then((response) => {
     localStorage.setItem('accessToken', response.data.user.token);
     localStorage.setItem('username', response.data.user.username);

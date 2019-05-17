@@ -3,3 +3,4 @@ node_modules/
 coverage/
 src/.DS_Store
 .env
+dist/

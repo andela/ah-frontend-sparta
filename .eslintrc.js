@@ -15,8 +15,10 @@ module.exports = {
 	"plugins": ["jest", "react"],
 	"rules": {
 		"no-param-reassign":"off",
+		"arrow-body-style":"off",
 		"react/no-unused-state":"off",
 		" no-restricted-globals":"off",
+		"no-restricted-globals":"off",
 		"react/prop-types":"off",
 		"no-unused-vars":"off",
 		"no-restricted-globals":"off",

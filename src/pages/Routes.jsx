@@ -40,11 +40,10 @@ class Routes extends Component {
             <Route path="/login" component={SigninComponent} />
             <Route path="/password-reset/" component={ResetPassword} />
             <Route path="/reset/:token/change/" component={ChangePassword} />
-            <PrivateRoute
+            <Route
               exact
               path="/dashboard"
               component={DashboardComponent}
-              isLoggedIn={(localStorage.getItem('userAuthenticated'))}
             />
             <PrivateRoute
               exact

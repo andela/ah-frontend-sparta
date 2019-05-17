@@ -61,9 +61,6 @@ const editArticleFailure = err => (
     payload: 'Errors have occured',
   }
 );
-
-
-
 export const postArticle = (
   articleData,
   props,
