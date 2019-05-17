@@ -10,6 +10,7 @@ const ArticleContainer = ({ articles }) => (
   </div>
 );
 
+
 ArticleContainer.defaultProps = {
   articles: [],
 };

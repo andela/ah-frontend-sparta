@@ -1,4 +1,5 @@
 import axios from 'axios';
+import promise from 'promise';
 
 const axiosInstance = axios.create({
   baseURL: process.env.baseURL,

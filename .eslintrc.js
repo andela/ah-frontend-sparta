@@ -15,7 +15,13 @@ module.exports = {
 	"plugins": ["jest", "react"],
 	"rules": {
 		"no-param-reassign":"off",
+		"react/no-unused-state":"off",
+		" no-restricted-globals":"off",
+		"react/prop-types":"off",
+		"no-unused-vars":"off",
 		"max-len": [1, 80, 2],
+		"no- param-reassign":"off",
+		"react/destructuring-assignment":"off",
 		"react/jsx-uses-react":1,
 		"react/react-in-jsx-scope": 1,
 		"jest/no-disabled-tests": "error",
@@ -25,6 +31,8 @@ module.exports = {
 		"jest/valid-expect": "error",
 		"import/prefer-default-export": "off",
 		"import/no-named-as-default":"off",
+		"react/prefer-stateless-function": "off",
+		"jest/valid-expect": "error"
 	},
 	"parser": "babel-eslint",
 };

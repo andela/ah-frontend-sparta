@@ -20,8 +20,9 @@ export const signInUser = (user, history) => () => {
       localStorage.setItem('accessToken', response.data.user.token);
       localStorage.setItem('username', response.data.user.username);
       localStorage.setItem('email', response.data.user.email);
+      localStorage.setItem('userAuthenticated', true);
       notify.show('Login successful', 'success', 4000);
-      history.push('/');
+      history.push('/dashboard');
     })
     .catch((error) => {
       const errorMessage = error.response.data.errors.error[0];

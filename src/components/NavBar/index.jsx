@@ -32,6 +32,9 @@ export class Navbar extends Component {
                 <input type="text" placeholder="SEARCH" />
               </form>
             </li>
+            <li className="nav-item">
+              <a href="/article/create">Add Article</a>
+            </li>
             {
               <NavBarAccountSection
                 sectionType={token ? 'Profile' : 'Accounts'}

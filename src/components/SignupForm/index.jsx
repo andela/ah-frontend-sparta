@@ -7,8 +7,10 @@ import Button from '../SignupButton';
 const SignupForm = ({
   username, email, password, confirmPassword, handleSubmit, onChange, error,
 }) => (
-  <div>
-    <div className="signStr spacebottom">Create an account</div>
+  <div style={{ paddingLeft: '50px' }}>
+    <p style={{ fontSize: '20px', paddingLeft: '65px' }}>
+        Create an account
+    </p>
     <form onSubmit={handleSubmit}>
       <InputBox
         type="text"

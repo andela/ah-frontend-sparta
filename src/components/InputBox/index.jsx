@@ -15,6 +15,7 @@ const InputBox = ({
       placeholder={placeholder}
       className="input"
       onChange={onChangeInput}
+      style={{ width: '80%' }}
     />
   </div>
 );
