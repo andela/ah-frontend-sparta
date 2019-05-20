@@ -25,7 +25,7 @@ const loginWithFb = token => (dispatch) => {
     });
     localStorage.setItem('accessToken', resp.data.auth_token.token);
     localStorage.setItem('userAuthenticated', true);
-    document.location.href = '/';
+    document.location.href = '/dashboard';
   });
 };
 

@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReplyToArticle test 1`] = `
+<div
+  className="form-group shadow-textarea"
+  style={
+    Object {
+      "overflow": "hidden",
+    }
+  }
+>
+  <textarea
+    className="form-control commentReplyTextarea z-depth-1"
+    name="comment"
+    placeholder="Comment on Article"
+    rows="5"
+  />
+  <button
+    className="commentReplyButtn"
+    type="submit"
+  >
+    POST
+     
+  </button>
+</div>
+`;

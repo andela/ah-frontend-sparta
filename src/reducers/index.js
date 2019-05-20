@@ -7,7 +7,7 @@ import resetReducer from './resetReducer';
 import profileReducer from './profileReducer';
 import pageStateReducer from './paginationReducer';
 import commentsReducer from './commentsReducer';
-
+import likeDislikeReducer from './likeDislikeReducer';
 
 export default combineReducers({
   auth: authReducer,
@@ -20,4 +20,5 @@ export default combineReducers({
   profile: profileReducer,
   pageState: pageStateReducer,
   comments: commentsReducer,
+  likeDislike: likeDislikeReducer,
 });
