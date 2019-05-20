@@ -152,12 +152,6 @@ describe('Testing Articles', () => {
       type: 'GET_ARTICLES',
     }];
 
-
-    const expectedActions = {
-      type: GET_ARTICLES,
-      payload: expectedPayload,
-    };
-
     moxios.wait(() => {
       const request = moxios.requests.mostRecent();
       request.respondWith({

@@ -6,6 +6,8 @@ import facebookReducer from './facebookReducer';
 import resetReducer from './resetReducer';
 import profileReducer from './profileReducer';
 import pageStateReducer from './paginationReducer';
+import commentsReducer from './commentsReducer';
+
 
 export default combineReducers({
   auth: authReducer,
@@ -17,4 +19,5 @@ export default combineReducers({
   resetReducer,
   profile: profileReducer,
   pageState: pageStateReducer,
+  comments: commentsReducer,
 });

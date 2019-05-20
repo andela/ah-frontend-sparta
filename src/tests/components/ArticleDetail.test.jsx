@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import ArticleDetail from '../../components/Articles/ArticleDetail';
 
 describe('Articles Details Component', () => {
@@ -20,7 +20,7 @@ describe('Articles Details Component', () => {
     },
   };
   beforeEach(() => {
-    mountApp = mount(<ArticleDetail {...props} />);
+    mountApp = shallow(<ArticleDetail {...props} />);
   });
 
   it('Should render without crashing', () => {
@@ -28,6 +28,6 @@ describe('Articles Details Component', () => {
   });
 
   it('Should render articles with tags', () => {
-    expect(mountApp.find('span')).toHaveLength(4);
+    expect(mountApp.find('span')).toHaveLength(3);
   });
 });

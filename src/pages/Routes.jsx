@@ -42,12 +42,6 @@ class Routes extends Component {
             <Route path="/reset/:token/change/" component={ChangePassword} />
             <PrivateRoute
               exact
-              path="/articles/:slug"
-              component={DisplayArticleComponent}
-              isLoggedIn={(localStorage.getItem('userAuthenticated'))}
-            />
-            <PrivateRoute
-              exact
               path="/dashboard"
               component={DashboardComponent}
               isLoggedIn={(localStorage.getItem('userAuthenticated'))}
@@ -58,11 +52,10 @@ class Routes extends Component {
               component={ArticlesComponent}
               isLoggedIn={(localStorage.getItem('userAuthenticated'))}
             />
-            <PrivateRoute
+            <Route
               exact
               path="/articles/:slug"
               component={DisplayArticleComponent}
-              isLoggedIn={(localStorage.getItem('userAuthenticated'))}
             />
             <PrivateRoute
               exact

@@ -1,0 +1,46 @@
+@import '../../assets/scss/shared.scss';
+
+.commectCard {
+	margin-bottom: rem(15);
+
+	.commentHeader {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		.authorDataContainer {
+			display: flex;
+			flex-direction: row;
+		}
+	}
+
+	.imagePlaceholder {
+		width: rem(50);
+		height: rem(50);
+		border-radius: rem(50);
+		background-color: #ddd;
+		display: inline-block;
+	}
+
+	.authorData {
+		margin-left: rem(10);
+
+		.commentDate {
+			font-size: rem(12);
+		}
+	}
+
+	.commentFooter {
+		background-color: transparent;
+		border-top-color: #eee;
+		border-top-width: rem(1);
+
+		.replyComment {
+			float: right;
+
+			.replyButton {
+				cursor: pointer;
+			}
+		}
+	}
+}

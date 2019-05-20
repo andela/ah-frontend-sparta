@@ -1,0 +1,24 @@
+.updateComment {
+  background-color: #172439;
+  outline: none;
+
+  &:hover {
+    background-color: #172439;
+    outline: none;
+    border: none;
+  }
+
+  &:active {
+    background-color: #172439;
+    outline: none;
+    border: none;
+  }
+}
+
+.btn-primary {
+  border: none;
+
+  &:active {
+    border: none;
+  }
+}
