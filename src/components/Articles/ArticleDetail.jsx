@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes, { shape } from 'prop-types';
 import moment from 'moment';
+import { Link } from 'react-router-dom';
 import DeleteArticleComponentModel from './DeleteArticleModel';
 import avartaImage from '../../assets/images/avarta.png';
 import './article.scss';
 
-const ArticleDetail = ({ article }) => (
+const ArticleDetail = ({ article, deleteAnArticle }) => (
   <div className="container article-detail-container">
     <div className="row">
       <div className="col-md-12">
@@ -58,27 +59,41 @@ const ArticleDetail = ({ article }) => (
                 </span>
               ))}
             </p>
-            <div style={{ backgroundColor: 'green' }}>
-              <button
-                type="button"
-                className="btn btn-primary float-left"
-              >
-                Edit
-                {' '}
-                <i className="far fa-edit" />
-              </button>
-              <button
-                type="button"
-                className="btn btn-danger float-right"
-                data-toggle="modal"
-                data-target="#deleteArticleModal"
-              >
+            {article.author && article.author.username === localStorage.getItem('username')
+              ? (
+                <div className="article-btns">
+                  <Link
+                    to={{
+                      pathname: `/articles/edit/${article.slug}`,
+                    }}
+                    className="btn btn-primary float-left"
+                  >
+                    Edit
+                    {' '}
+                    <i className="far fa-edit" />
+                  </Link>
+                  <button
+                    type="button"
+                    className="btn btn-danger float-right"
+                    data-toggle="modal"
+                    data-target="#deleteArticleModal"
+                  >
                 Delete
-                {' '}
-                <i className="fas fa-trash-alt" />
-              </button>
-            </div>
-            <DeleteArticleComponentModel />
+                    {' '}
+                    <i className="fas fa-trash-alt" />
+                  </button>
+                </div>
+              )
+              : ''
+
+          }
+            <DeleteArticleComponentModel
+              title={article.title}
+              slug={article.slug}
+              username={
+              article.author && article.author.username}
+              deleteAnArticle={deleteAnArticle}
+            />
           </div>
         </div>
       </div>

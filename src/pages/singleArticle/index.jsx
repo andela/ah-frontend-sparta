@@ -1,8 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import ArticleDetail from '../../components/Articles/ArticleDetail';
-import { getSingleArticle } from '../../actions/articlesActions';
+import {
+  getSingleArticle,
+  deleteSingleArticle,
+} from '../../actions/articlesActions';
 
 export class SingleArticles extends React.Component {
   componentDidMount() {
@@ -11,10 +15,16 @@ export class SingleArticles extends React.Component {
     getArticle(slug);
   }
 
+  deleteAnArticle = (slug) => {
+    const { deleteArticle } = this.props;
+    deleteArticle(slug, this.props);
+    document.getElementById(`cancelModal${slug}`).click();
+  }
+
   render() {
     const { article } = this.props;
     return (
-      <ArticleDetail article={article.article} />
+      <ArticleDetail article={article.article} deleteAnArticle={this.deleteAnArticle} />
     );
   }
 }
@@ -35,5 +45,9 @@ SingleArticles.propTypes = {
 const mapStateToProps = state => ({
   article: state.article,
 });
+
 export default connect(mapStateToProps,
-  { getArticle: getSingleArticle })(SingleArticles);
+  {
+    getArticle: getSingleArticle,
+    deleteArticle: deleteSingleArticle,
+  })(SingleArticles);

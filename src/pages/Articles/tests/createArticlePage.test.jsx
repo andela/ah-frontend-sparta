@@ -62,4 +62,5 @@ describe('Articles Page Component', () => {
     instance.onSubmit({ preventDefault: jest.fn() });
     expect(props.addArticle).toHaveBeenCalled();
   });
+
 });

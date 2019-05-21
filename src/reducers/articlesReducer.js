@@ -5,6 +5,11 @@ import {
   FETCH_AN_ARTICLE_FAILURE,
   FETCH_AN_ARTICLE_SUCCESS,
   GET_ARTICLES,
+  EDIT_AN_ARTICLE_SUCCESS,
+  EDIT_AN_ARTICLE_FAILURE,
+  DELETE_AN_ARTICLE_SUCCESS,
+  DELETE_AN_ARTICLE_FAILURE,
+
 } from '../actions/types';
 
 const initialState = { error: undefined, article: undefined, articles: [] };
@@ -21,6 +26,30 @@ export default (state = initialState, action) => {
       return {
         article: action.payload,
         error: undefined,
+        articles: undefined,
+      };
+    case EDIT_AN_ARTICLE_SUCCESS:
+      return {
+        article: action.payload,
+        error: undefined,
+        articles: undefined,
+      };
+    case DELETE_AN_ARTICLE_SUCCESS:
+      return {
+        article: action.payload,
+        error: undefined,
+        articles: undefined,
+      };
+    case DELETE_AN_ARTICLE_FAILURE:
+      return {
+        article: action.payload,
+        error: undefined,
+        articles: undefined,
+      };
+    case EDIT_AN_ARTICLE_FAILURE:
+      return {
+        article: undefined,
+        error: action.payload,
         articles: undefined,
       };
     case FETCH_AN_ARTICLE_SUCCESS:

@@ -13,6 +13,8 @@ import ResetPassword from '../components/resetPassword';
 import ChangePassword from './PasswordReset';
 import DashboardComponent from './Dashboard';
 import DisplayArticleComponent from './singleArticle';
+import EditArticleComponent from './singleArticle/EditArticle';
+
 
 class Routes extends Component {
   constructor(props) {
@@ -30,15 +32,44 @@ class Routes extends Component {
           <Switch>
             <Route exact path="/" component={LandingComponent} />
             <Route path="/register" component={SignupComponent} />
+            <PrivateRoute
+              path="/articles/edit/:slug"
+              component={EditArticleComponent}
+              isLoggedIn={(localStorage.getItem('userAuthenticated'))}
+            />
             <Route path="/login" component={SigninComponent} />
             <Route path="/password-reset/" component={ResetPassword} />
             <Route path="/reset/:token/change/" component={ChangePassword} />
-            <Route exact path="/articles/:slug" component={DisplayArticleComponent} />
-            <Route exact path="/dashboard" component={DashboardComponent} />
-            <Route exact path="/article/create" component={ArticlesComponent} />
-            <Route exact path="/articles/:slug" component={DisplayArticleComponent} />
-            <Route exact path="/dashboard" component={DashboardComponent} />
-            <Route exact path="/article/create" component={ArticlesComponent} />
+            <PrivateRoute
+              exact
+              path="/articles/:slug"
+              component={DisplayArticleComponent}
+              isLoggedIn={(localStorage.getItem('userAuthenticated'))}
+            />
+            <PrivateRoute
+              exact
+              path="/dashboard"
+              component={DashboardComponent}
+              isLoggedIn={(localStorage.getItem('userAuthenticated'))}
+            />
+            <PrivateRoute
+              exact
+              path="/article/create"
+              component={ArticlesComponent}
+              isLoggedIn={(localStorage.getItem('userAuthenticated'))}
+            />
+            <PrivateRoute
+              exact
+              path="/articles/:slug"
+              component={DisplayArticleComponent}
+              isLoggedIn={(localStorage.getItem('userAuthenticated'))}
+            />
+            <PrivateRoute
+              exact
+              path="/article/create"
+              component={ArticlesComponent}
+              isLoggedIn={(localStorage.getItem('userAuthenticated'))}
+            />
             <PrivateRoute
               path="/profile"
               component={ViewProflle}
