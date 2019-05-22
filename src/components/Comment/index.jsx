@@ -73,9 +73,30 @@ const Comment = ({
       <div className="card-footer text-muted commentFooter">
         <div className="replyComment">
           {replies.length === 0
-            ? <span className="replyButton" role="presentation" onClick={() => showReplies(id)}>Reply</span>
+            ? (
+              <span
+                className="replyButton"
+                onKeyPress={() => showReplies(id)}
+                onClick={() => showReplies(id)}
+                role="button"
+                tabIndex="-1"
+              >
+              Reply
+              </span>
+            )
             : replies.length === 1
-              ? <span className="replyButton" role="presentation" onClick={() => showReplies(id)}> 1 Reply</span>
+              ? (
+                <span
+                  className="replyButton"
+                  onKeyPress={() => showReplies(id)}
+                  onClick={() => showReplies(id)}
+                  role="button"
+                  tabIndex="-1"
+                >
+                  {' '}
+                  1 Reply
+                </span>
+              )
               : (
                 <span className="replyButton" role="presentation" onClick={() => showReplies(id)}>
                   {replies.length}

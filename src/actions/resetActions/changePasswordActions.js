@@ -2,6 +2,7 @@ import axios from 'axios';
 import { CHANGE_PASSWORD } from '../types';
 import notification from '../../utils/Notify';
 
+const { baseURL } = process.env;
 export const ChangePasswordActions = (
   newPassword,
   confirmPassword,
@@ -12,7 +13,7 @@ export const ChangePasswordActions = (
     user: { password: newPassword, confirm_password: confirmPassword },
   };
   const headers = { 'Content-Type': 'application/json' };
-  const url = `${process.env.baseURL}/users/reset/${token}/change/`;
+  const url = `${baseURL}/users/reset/${token}/change/`;
   return axios
     .put(url, body, { headers })
     .then((response) => {

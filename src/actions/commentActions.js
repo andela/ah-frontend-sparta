@@ -2,16 +2,15 @@ import { notify } from 'react-notify-toast';
 import axios from '../helpers/axiosInstance';
 import * as types from './types';
 
-export const fetchCommentsAction = slug => (dispatch) => {
-  return axios
-    .get(`${process.env.baseURL}/articles/${slug}/comments`)
-    .then((response) => {
-      dispatch({
-        type: types.FETCH_COMMENTS,
-        payload: response.data.comments,
-      });
+const { baseURL } = process.env;
+export const fetchCommentsAction = slug => dispatch => axios
+  .get(`${baseURL}/articles/${slug}/comments`)
+  .then((response) => {
+    dispatch({
+      type: types.FETCH_COMMENTS,
+      payload: response.data.comments,
     });
-};
+  });
 
 
 export const replyToCommentAction = (slug, commentId, commentReply) => () => {
@@ -22,7 +21,7 @@ export const replyToCommentAction = (slug, commentId, commentReply) => () => {
   };
 
   axios
-    .post(`${process.env.baseURL}/articles/${slug}/comments/${commentId}/reply`, data)
+    .post(`${baseURL}/articles/${slug}/comments/${commentId}/reply`, data)
     .then(() => {
       location.reload();
     })
@@ -38,7 +37,7 @@ export const addCommentToArticleAction = (slug, comment) => () => {
     },
   };
   axios
-    .post(`${process.env.baseURL}/articles/${slug}/comments/`, data)
+    .post(`${baseURL}/articles/${slug}/comments/`, data)
     .then(() => {
       location.reload();
     })
@@ -49,7 +48,7 @@ export const addCommentToArticleAction = (slug, comment) => () => {
 
 export const deleteArticleCommentAction = (slug, id) => {
   axios
-    .delete(`${process.env.baseURL}/articles/${slug}/comments/${id}`)
+    .delete(`${baseURL}/articles/${slug}/comments/${id}`)
     .then(() => {
       notify.show('Comment deleted', 'success', 2000);
       setTimeout(() => {
@@ -66,7 +65,7 @@ export const updateArticleCommentAction = (slug, id, updtateComment) => {
   };
 
   axios
-    .put(`${process.env.baseURL}/articles/${slug}/comments/${id}`, data)
+    .put(`${baseURL}/articles/${slug}/comments/${id}`, data)
     .then(() => {
       notify.show('Comment updated', 'success', 1000);
       setTimeout(() => {
