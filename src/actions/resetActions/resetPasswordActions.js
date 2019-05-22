@@ -2,9 +2,10 @@ import axios from 'axios';
 import { PASSWORD_RESET, PASSWORD_RESET_FAIL } from '../types';
 import notification from '../../utils/Notify';
 
+const { baseURL } = process.env;
 export const resetPasswordActions = email => (dispatch) => {
   const body = { email };
-  const url = `${process.env.baseURL}/users/password-reset/`;
+  const url = `${baseURL}/users/password-reset/`;
 
   return axios
     .post(url, body)

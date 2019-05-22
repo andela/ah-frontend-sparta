@@ -1,8 +1,9 @@
 import axios from 'axios';
 import { GET_NEXT, ORIGINAL } from './types';
 
+const { baseURL } = process.env;
 export const getOriginal = () => (dispatch) => {
-  const url = `${process.env.baseURL2}/articles/?limit=5`;
+  const url = `${baseURL}/articles/?limit=5`;
   const headers = { Authorization: `Bearer ${sessionStorage.token}` };
   return axios
     .get(url, headers)

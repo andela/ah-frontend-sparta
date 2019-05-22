@@ -1,8 +1,9 @@
 import axios from '../helpers/axiosInstance';
 import { ERROR, USER } from './types';
 
+const { baseURL } = process.env;
 export const fetchProfileActions = username => dispatch => axios
-  .get(`${process.env.baseURL}/profiles/${username}`)
+  .get(`${baseURL}/profiles/${username}`)
   .then((response) => {
     dispatch({ type: USER, payload: response.data.profile });
     localStorage.setItem('username', response.data.user.username);
@@ -17,7 +18,7 @@ export const fetchProfileActions = username => dispatch => axios
 export const updateProfileActions = (updatedProfile, history) => (dispatch) => {
   const username = localStorage.getItem('username');
   return axios
-    .put(`${process.env.baseURL}/profiles/${username}`, updatedProfile)
+    .put(`${baseURL}/profiles/${username}`, updatedProfile)
     .then((response) => {
       dispatch({ type: USER, payload: response.data.profile });
       history.push('/profile');
@@ -35,7 +36,7 @@ export const saveImageActions = (url, username) => (dispatch) => {
     image: url,
   };
   return axios
-    .put(`${process.env.baseURL}/profiles/${username}`, data)
+    .put(`${baseURL}/profiles/${username}`, data)
     .then(() => {
       localStorage.setItem('image', url);
       location.reload();

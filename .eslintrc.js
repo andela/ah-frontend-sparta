@@ -14,6 +14,7 @@ module.exports = {
 	},
 	"plugins": ["jest", "react"],
 	"rules": {
+		"no-nested-ternary": "off",
 		"no-param-reassign":"off",
 		"react/no-unused-state":"off",
 		" no-restricted-globals":"off",
