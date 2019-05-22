@@ -8,8 +8,11 @@ import {
   DELETE_AN_ARTICLE_FAILURE,
   EDIT_AN_ARTICLE_SUCCESS,
   EDIT_AN_ARTICLE_FAILURE,
+  ORIGINAL,
+  GET_NEXT,
 } from '../../actions/types';
-import articlesReducer from '../../reducers/articlesReducer';
+import articlesReducer, { paginateArticles, firstArticles } from
+  '../../reducers/articlesReducer';
 
 describe('Articles Reducer', () => {
   it('Should return a  new state if receiving a type', () => {
@@ -172,6 +175,30 @@ describe('Articles Reducer', () => {
     };
 
     const newState = articlesReducer(initialState, action);
+  });
+
+  it('test get paginated article ', () => {
+    const initialState = [];
+    const expectation = [];
+
+    const action = {
+      type: ORIGINAL,
+      articles: [],
+    };
+
+    const newState = firstArticles(initialState, action);
+    expect(newState).toEqual(expectation);
+  });
+  it('test get next paginated article ', () => {
+    const initialState = [];
+    const expectation = [];
+
+    const action = {
+      type: GET_NEXT,
+      articles: [],
+    };
+
+    const newState = paginateArticles(initialState, action);
     expect(newState).toEqual(expectation);
   });
 });

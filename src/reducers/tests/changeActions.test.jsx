@@ -14,6 +14,7 @@ describe('Change password', () => {
   describe('actions', () => {
     const newPassword = 'Dorothy123@';
     const confirmPassword = 'Dorothy123@';
+    const history = { push: jest.fn() };
     const token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwiZXhwIjoxNTU3ODE3MzE3fQ.XLyRn8oN2pmOfqepHJE9iV-jLgpvkHUktTCLlXob-5M';
 
     beforeEach(() => {
@@ -38,7 +39,7 @@ describe('Change password', () => {
       ];
 
       const store = mockStore({ newpassword: '', confirmpassword: '', token: '' });
-      return store.dispatch(ChangePasswordActions(newPassword, confirmPassword, token)).then(() => {
+      return store.dispatch(ChangePasswordActions(newPassword, confirmPassword, token, history)).then(() => {
         expect(store.getActions()).toEqual(expectedActions);
       });
     });

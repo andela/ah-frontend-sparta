@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import PasswordResetForm from '../../components/PasswordResetForm';
@@ -23,11 +24,12 @@ export class PasswordReset extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     const { newPassword, confirmPassword } = this.state;
-    const { changePassword, match } = this.props;
+    const { changePassword, match, history } = this.props;
     changePassword(
       newPassword,
       confirmPassword,
       match.params.token,
+      history,
     );
   }
 
@@ -65,4 +67,4 @@ PasswordReset.defaultProps = {
   changePassword: () => { },
   match: () => { },
 };
-export default connect(null, { changePassword: ChangePasswordActions })(PasswordReset);
+export default connect(null, { changePassword: ChangePasswordActions })(withRouter(PasswordReset));

@@ -5,36 +5,45 @@ import DisplayArticles from './DisplayArticles';
 import './article.scss';
 
 
-const DashboardArticles = ({ articles }) => (
+const DashboardArticles = ({ firstArticles, totalArticles }) => (
 
   <div>
+    <p className="text">
+      Showing
+      {' '}
+      <strong>{firstArticles && firstArticles.length}</strong>
+      {' '}
+      out of
+      {' '}
+      <strong>{totalArticles && totalArticles.length}</strong>
+    </p>
     {
-            articles.length > 0 ? (
-              articles.map((article) => {
-                const articleDate = moment(article.createdAt.slice(0, 10)).format(
-                  'LL',
-                );
-                return (
-                  <div key={article.id} className="container" style={{ marginTop: '20px' }}>
-                    <DisplayArticles
-                      article={article}
-                      articleDate={articleDate}
-                    />
-                    <br />
-                  </div>
+      totalArticles.length > 0 ? (
+        totalArticles.map((article) => {
+          const articleDate = moment(article.createdAt.slice(0, 10)).format(
+            'LL',
+          );
+          return (
+            <div key={article.id} className="container" style={{ marginTop: '20px' }}>
+              <DisplayArticles
+                article={article}
+                articleDate={articleDate}
+              />
+              <br />
+            </div>
 
-                );
-              })
-            ) : (
-              <div>No Posts where Found !!!!</div>
-            )}
+          );
+        })
+      ) : (
+        <div>No Posts where Found !!!!</div>
+      )}
   </div>
 
 );
 DashboardArticles.defaultProps = {
-  articles: [],
+  totalArticles: [],
 };
 DashboardArticles.propTypes = {
-  articles: PropTypes.arrayOf(PropTypes.object),
+  totalArticles: PropTypes.arrayOf(PropTypes.object),
 };
 export default DashboardArticles;

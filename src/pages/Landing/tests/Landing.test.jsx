@@ -4,15 +4,13 @@ import { mount, shallow } from 'enzyme';
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import moxios from 'moxios';
-import { Dashboard } from '../index';
+import { Landing } from '../index';
 import { data } from '../../../reducers/tests/fixtures/moxios_mock';
 
-describe('Dashboard Component', () => {
+describe('Landing page', () => {
   const initialState = {
     articles: data.articles.article.results,
   };
-  const pageState = { next: null, prev: null };
-
   const mockStore = configureStore([thunk]);
   let store;
 
@@ -20,11 +18,12 @@ describe('Dashboard Component', () => {
     store = mockStore(initialState);
     moxios.install();
   });
-
   afterEach(() => {
     moxios.uninstall();
   });
+
   const props = {
+    articles: [],
     getArticles: jest.fn(),
     fetchNext: jest.fn(),
     fetchOriginal: jest.fn(),
@@ -32,13 +31,12 @@ describe('Dashboard Component', () => {
     paginatearticles: [],
     pageState: { next: null, prev: null },
   };
-  let instance;
   let wrapper;
 
   beforeEach(() => {
     wrapper = mount(
       <Provider store={store}>
-        <Dashboard {...props} />
+        <Landing {...props} />
       </Provider>,
     );
   });
@@ -47,19 +45,27 @@ describe('Dashboard Component', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('Dashboard should get data', () => {
-    const wrapper2 = shallow(<Dashboard {...props} />);
+  it('componentDidMount Method Called', () => {
+    const spy = jest.spyOn(Landing.prototype, 'componentDidMount');
+    mount(<Landing {...props} />);
+    expect(spy).toHaveBeenCalledTimes(1);
+  });
+  it('landing should get data', () => {
+    const wrapper2 = shallow(<Landing {...props} />);
     const event = {
       preventDefault: jest.fn(),
     };
     wrapper2.instance().fetchData(event);
+    // console.log(wrapper2.instance().props);
+    expect(wrapper2.instance().props.fetchNext).toBeCalled();
   });
 
-  it('Dashboard should get next', () => {
-    const wrapper2 = shallow(<Dashboard {...props} />);
+  it('landing should get next', () => {
+    const wrapper2 = shallow(<Landing {...props} />);
     const event = {
       preventDefault: jest.fn(),
     };
     wrapper2.instance().fetchPrevious(event);
+    expect(wrapper2.instance().props.fetchNext).toBeCalled();
   });
 });

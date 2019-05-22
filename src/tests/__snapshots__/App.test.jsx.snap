@@ -87,29 +87,39 @@ Array [
         </a>
       </div>
     </div>
-    <div
-      className="wrapper"
-    >
+    <div>
       <div>
-        <div>
-          No Posts where Found !!!!
+        <div
+          className="wrapper"
+        >
+          <div>
+            <div>
+              No Posts where Found !!!!
+            </div>
+          </div>
         </div>
-      </div>
-      <div>
-        <h1>
-          Trending
-        </h1>
         <br />
-        <hr />
         <br />
-        <div>
-          No Trending Articles where Found !!!!
-        </div>
       </div>
     </div>
-    <br />
-    <br />
-    <br />
+    <div
+      className="container pagination-buttons"
+    >
+      <button
+        className="btn left pagButton"
+        disabled={true}
+        type="button"
+      >
+        Previous
+      </button>
+      <button
+        className="btn right pagButton"
+        disabled={true}
+        type="button"
+      >
+        Next
+      </button>
+    </div>
   </div>,
 ]
 `;

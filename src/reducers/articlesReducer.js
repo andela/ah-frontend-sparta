@@ -1,4 +1,3 @@
-
 import {
   POST_ARTICLE_FAILURE,
   POST_ARTICLE_SUCCESS,
@@ -9,7 +8,8 @@ import {
   EDIT_AN_ARTICLE_FAILURE,
   DELETE_AN_ARTICLE_SUCCESS,
   DELETE_AN_ARTICLE_FAILURE,
-
+  GET_NEXT,
+  ORIGINAL,
 } from '../actions/types';
 
 const initialState = { error: undefined, article: undefined, articles: [] };
@@ -70,6 +70,23 @@ export default (state = initialState, action) => {
         articles: action.payload,
         error: undefined,
       };
+    default:
+      return state;
+  }
+};
+export const paginateArticles = (state = [], action) => {
+  switch (action.type) {
+    case GET_NEXT:
+      return action.articles;
+    default:
+      return state;
+  }
+};
+
+export const firstArticles = (state = [], action) => {
+  switch (action.type) {
+    case ORIGINAL:
+      return action.articles;
     default:
       return state;
   }

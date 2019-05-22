@@ -4,33 +4,93 @@ import PropTypes from 'prop-types';
 
 import DashboardArticles from '../../components/Articles/DashboardArticles';
 import { fetchArticles } from '../../actions/articlesActions';
+import { getOriginal, getNext } from '../../actions/paginationActions';
+
+import './Dashboard.scss';
 
 
 export class Dashboard extends React.Component {
   componentDidMount() {
-    const { getArticles } = this.props;
+    const { getArticles, fetchOriginal } = this.props;
     getArticles();
+    fetchOriginal();
   }
 
+  fetchData = (event) => {
+    event.preventDefault();
+    const { fetchNext } = this.props;
+    fetchNext(localStorage.next);
+  };
+
+  fetchPrevious = (event) => {
+    event.preventDefault();
+    const { fetchNext } = this.props;
+    fetchNext(localStorage.previous);
+  };
+
   render() {
-    const { articles } = this.props;
+    const {
+      firstArticles, paginateArticles, pageState: { next, prev },
+      articles,
+    } = this.props;
+
     return (
-      <DashboardArticles articles={articles} />
+      <div>
+        {paginateArticles.length === 0 ? <DashboardArticles firstArticles={firstArticles} totalArticles={articles} /> : <DashboardArticles paginateArticles={paginateArticles} firstArticles={firstArticles} totalArticles={articles} />}
+        <div className="container pagination-buttons">
+          {prev ? (
+            <button type="button" className="btn left pagButton" onClick={this.fetchPrevious}>
+              Previous
+            </button>
+          ) : (
+            <button type="button" className="btn left pagButton" disabled>
+                Previous
+            </button>
+          )}
+          { next ? (
+            <button type="button" className="btn right pagButton" onClick={this.fetchData}>
+              Next
+            </button>
+          ) : (
+            <button type="button" className="btn right pagButton" disabled>
+              Next
+            </button>
+          )}
+        </div>
+      </div>
     );
   }
 }
 
 Dashboard.defaultProps = {
-  articles: [],
+  firstArticles: [],
+  paginateArticles: [],
 };
 Dashboard.propTypes = {
-  articles: PropTypes.arrayOf(PropTypes.object),
   getArticles: PropTypes.func.isRequired,
+  firstArticles: PropTypes.arrayOf(PropTypes.object),
+  paginateArticles: PropTypes.arrayOf(PropTypes.object),
+  fetchOriginal: PropTypes.func.isRequired,
+  fetchNext: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
   articles: state.article.articles,
+  paginateArticles: state.paginateArticles,
+  firstArticles: state.firstArticles,
+  pageState: state.pageState,
+});
+const mapDispatchToProps = dispatch => ({
+  fetchOriginal: () => {
+    dispatch(getOriginal());
+  },
+  fetchNext: (url) => {
+    dispatch(getNext(url));
+  },
+  getArticles: () => {
+    dispatch(fetchArticles());
+  },
 });
 
 export default connect(mapStateToProps,
-  { getArticles: fetchArticles })(Dashboard);
+  mapDispatchToProps)(Dashboard);

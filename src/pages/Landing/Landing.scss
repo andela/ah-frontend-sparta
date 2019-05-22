@@ -5,7 +5,18 @@ $heading: green;
 h1 {
   color: $heading;
 }
-
+.btn{
+  font-size: 1rem;
+  background-color: #172439;
+  color: #f8f9fa;
+  align-content: center;
+}
+.btn-right {
+  float: right;
+}
+.btn-left {
+  float: left;
+}
 .flex-container {
   display: flex;
   background-color: DodgerBlue;
@@ -433,4 +444,8 @@ h1 {
   
  
 }
-
+.pagButton {
+    &:hover {
+        color: aliceblue
+    }
+}
