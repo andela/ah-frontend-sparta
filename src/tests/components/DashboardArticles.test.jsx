@@ -6,7 +6,7 @@ import DashboardArticles from '../../components/Articles/DashboardArticles';
 describe('Dashboard Articles Component', () => {
   let mountApp;
   const props = {
-    articles: [
+    totalArticles: [
 
       {
         id: 1,

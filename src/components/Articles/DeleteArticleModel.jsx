@@ -52,6 +52,7 @@ const deleteArticleModal = ({ title, slug, deleteAnArticle }) => (
           </button>
           <button
             type="button"
+            id="DeleteArticleBtn"
             className="btn btn-danger"
             onClick={() => {
               deleteAnArticle(slug);

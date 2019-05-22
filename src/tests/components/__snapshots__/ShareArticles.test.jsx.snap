@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Share Articles Component Should render without crashing 1`] = `
+<div
+  className="icons"
+>
+  <div
+    className="dropup"
+  >
+    <button
+      aria-expanded="false"
+      aria-haspopup="true"
+      className="btn custom-share-button  float-right"
+      data-toggle="dropdown"
+      type="button"
+    >
+      Share
+       
+      <i
+        className="fas fa-share-alt"
+      />
+    </button>
+    <div
+      className="dropdown-menu"
+    >
+      <a
+        className="dropdown-item"
+        href="https://www.facebook.com/sharer/sharer.php?u=undefined/articles/post-one-first"
+      >
+        <i
+          className="fab fa-facebook-square facebook-icon"
+        />
+        Facebook
+      </a>
+      <a
+        className="dropdown-item"
+        href="https://twitter.com/intent/tweet?url=undefined/articles/post-one-first&text=too long a story"
+      >
+        <i
+          className="fab fa-twitter twitter-icon"
+        />
+        Twitter
+      </a>
+      <a
+        className="dropdown-item"
+        href="mailto:?Subject=Post%20one&body=I found this article to be worth reading, Post one undefined/articles/post-one-first"
+      >
+        <i
+          className="fas fa-envelope-square envelop-icon"
+        />
+        Mail
+      </a>
+    </div>
+  </div>
+</div>
+`;
