@@ -19,6 +19,7 @@ const ArticleDetail = ({
   deleteComment,
   updateComment,
   onChangeComment,
+  likeArticle, dislikeArticle,
 }) => (
   <div className="container article-detail-container">
     <div className="row">
@@ -28,14 +29,30 @@ const ArticleDetail = ({
             <h1 className="card-title article-title ">{article.title}</h1>
             <div className="row">
               <div className="col-md-3">
-                <img src={avartaImage} className="img-circle" alt="user-icon" width="70px" height="70px" />
+                <img
+                  src={avartaImage}
+                  className="img-circle"
+                  alt="user-icon"
+                  width="70px"
+                  height="70px"
+                />
               </div>
             </div>
             <br />
-            <button type="button" className="btn btn-sm btn-outline-secondary">Unfollow</button>
+            <button
+              type="button"
+              className="btn btn-sm btn-outline-secondary"
+            >
+            Unfollow
+            </button>
             &nbsp;
             &nbsp;
-            <button type="button" className="btn btn-sm btn-outline-secondary">Follow</button>
+            <button
+              type="button"
+              className="btn btn-sm btn-outline-secondary"
+            >
+            Follow
+            </button>
             <p>
               {article.author && (
                 <b>
@@ -46,11 +63,10 @@ const ArticleDetail = ({
               )}
             </p>
             <h6 className="card-subtitle mb-2 text-muted">
-              {
-                              article.createdAt && moment(article.createdAt.slice(0, 10)).format(
-                                'LL',
-                              )
-                  }
+              {article.createdAt && moment(article.createdAt.slice(0, 10))
+                .format(
+                  'LL',
+                )}
 
             </h6>
             <br />
@@ -72,7 +88,8 @@ const ArticleDetail = ({
                 </span>
               ))}
             </p>
-            {article.author && article.author.username === localStorage.getItem('username')
+            {article.author && article.author.username
+            === localStorage.getItem('username')
               ? (
                 <div className="article-btns">
                   <Link
@@ -96,10 +113,23 @@ const ArticleDetail = ({
                     <i className="fas fa-trash-alt" />
                   </button>
                 </div>
-              )
-              : ''
-
-            }
+              ) : ''}
+            <div className="like-dislike">
+              <i
+                className="far fa-thumbs-up"
+                onClick={likeArticle}
+                role="presentation"
+              />
+              {' '}
+              {article.likes}
+              <i
+                className="far fa-thumbs-down"
+                onClick={dislikeArticle}
+                role="presentation"
+              />
+              {' '}
+              {article.dislikes}
+            </div>
             <DeleteArticleComponentModel
               title={article.title}
               slug={article.slug}

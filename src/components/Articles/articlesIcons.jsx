@@ -12,14 +12,8 @@ const articlesIcons = () => (
     </a>
     &nbsp;
     &nbsp;
-    <a href="hjgjghg">
-      <i className="far fa-thumbs-up pull float-right" />
-    </a>
     &nbsp;
     &nbsp;
-    <a href="hgjghgj">
-      <i className="far fa-thumbs-down" />
-    </a>
     &nbsp;
     &nbsp;
 

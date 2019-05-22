@@ -15,7 +15,6 @@ import DashboardComponent from './Dashboard';
 import DisplayArticleComponent from './singleArticle';
 import EditArticleComponent from './singleArticle/EditArticle';
 
-
 class Routes extends Component {
   constructor(props) {
     super(props);
@@ -79,5 +78,4 @@ class Routes extends Component {
     );
   }
 }
-
 export default Routes;

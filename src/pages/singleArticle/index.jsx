@@ -1,12 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { notify } from 'react-notify-toast';
 import ArticleDetail from '../../components/Articles/ArticleDetail';
+
 import {
   getSingleArticle,
   deleteSingleArticle,
+} from '../../actions/articlesActions';
+import {
+  likeAnArticle,
+  dislikeAnArticle,
+} from '../../actions/likeDislikeActions';
+import {
   fetchCommentsAction,
   replyToCommentAction,
   addCommentToArticleAction,
@@ -15,20 +21,33 @@ import {
 } from '../../actions/index';
 
 export class SingleArticles extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      displayEditCommentDialog: false,
-    };
+  state = {
+    likes: '',
+    dislikes: '',
+    count: 1,
+    displayEditCommentDialog: false,
   }
-
 
   componentDidMount() {
     const { getArticle, fetchComments, match } = this.props;
     const { slug } = match.params;
     getArticle(slug);
     fetchComments(slug);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    const { likeDislike: { likes } } = nextProps;
+    const { getArticle } = this.props;
+    const { slug } = this.props.match.params;
+    const { count } = this.state;
+
+    if (likes <= 1) {
+      this.setState({ count: 1 });
+      if (count === 1) {
+        getArticle(slug);
+        this.setState({ count: 0 });
+      }
+    }
   }
 
   showReplies = (id) => {
@@ -71,33 +90,42 @@ export class SingleArticles extends React.Component {
     });
   }
 
-  deleteAnArticle = (slug) => {
-    const { deleteArticle } = this.props;
-    deleteArticle(slug, this.props);
-    document.getElementById(`cancelModal${slug}`).click();
-  }
+likeArticle = () => {
+  const { slug } = this.props.match.params;
+  this.props.likeAnArticle(slug);
+}
 
-  render() {
-    const { article, comments } = this.props;
-    return (
-      <div>
-        <ArticleDetail
-          article={article.article}
-          deleteAnArticle={this.deleteAnArticle}
-          comments={comments}
-          showReplies={this.showReplies}
-          replyDisplayState={this.state}
-          postReplyToComment={this.postReplyToComment}
-          onCommentChanged={this.onCommentChanged}
-          postComment={this.postComment}
-          deleteComment={this.deleteComment}
-          updateComment={this.updateComment}
-          onChangeComment={this.onChangeComment}
-        />
+dislikeArticle = () => {
+  const { slug } = this.props.match.params;
+  this.props.dislikeAnArticle(slug);
+}
 
-      </div>
-    );
-  }
+deleteAnArticle = (slug) => {
+  const { deleteArticle } = this.props;
+  deleteArticle(slug, this.props);
+  document.getElementById(`cancelModal${slug}`).click();
+}
+
+render() {
+  const { article, comments } = this.props;
+  return (
+    <ArticleDetail
+      article={article.article}
+      likeArticle={this.likeArticle}
+      dislikeArticle={this.dislikeArticle}
+      deleteAnArticle={this.deleteAnArticle}
+      comments={comments}
+      showReplies={this.showReplies}
+      replyDisplayState={this.state}
+      postReplyToComment={this.postReplyToComment}
+      onCommentChanged={this.onCommentChanged}
+      postComment={this.postComment}
+      deleteComment={this.deleteComment}
+      updateComment={this.updateComment}
+      onChangeComment={this.onChangeComment}
+    />
+  );
+}
 }
 
 SingleArticles.defaultProps = {
@@ -115,6 +143,7 @@ SingleArticles.propTypes = {
 const mapStateToProps = state => ({
   article: state.article,
   comments: state.comments,
+  likeDislike: state.likeDislike,
 });
 
 export default connect(mapStateToProps,
@@ -126,4 +155,6 @@ export default connect(mapStateToProps,
     addCommentToArticle: addCommentToArticleAction,
     deleteArticleComment: deleteArticleCommentAction,
     updateArticleComment: updateArticleCommentAction,
+    likeAnArticle,
+    dislikeAnArticle,
   })(SingleArticles);

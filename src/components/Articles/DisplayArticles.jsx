@@ -9,7 +9,10 @@ const DisplayArticles = ({ article, articleDate }) => (
   <div className="row">
     <div className="col-md-12">
       <div className="row">
-        <div className="card col-md-12" style={{ boxShadow: '5px 10px 18px #888888' }}>
+        <div
+          className="card col-md-12"
+          style={{ boxShadow: '5px 10px 18px #888888' }}
+        >
           <h5 className="card-header">{article.title}</h5>
           <div className="card-body">
             <h5 className="card-title">

@@ -169,7 +169,15 @@ div.ReactTags__suggestions ul li.ReactTags__activeSuggestion {
 }
 
 .custom-model-dialog{
-    padding-top: 240px;
+    padding-top: 15rem;
+}
+
+.fa-thumbs-up, .fa-thumbs-down {
+  cursor: pointer;
+  font-size: 1.875rem;
+  padding: 0.9375rem;
+  margin-left: 60px;
+  
 }
 
 .delete-article-title {

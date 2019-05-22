@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Comments snapshot test 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "marginBottom": 15,
+        "marginTop": 100,
+      }
+    }
+  >
+    <div
+      className="form-group shadow-textarea"
+      style={
+        Object {
+          "overflow": "hidden",
+        }
+      }
+    >
+      <textarea
+        className="form-control commentReplyTextarea z-depth-1"
+        name="comment"
+        onChange={[MockFunction]}
+        placeholder="Comment on Article"
+        rows="5"
+      />
+      <button
+        className="commentReplyButtn"
+        onClick={[MockFunction]}
+        type="submit"
+      >
+        POST
+         
+      </button>
+    </div>
+    <span
+      style={
+        Object {
+          "fontSize": 28,
+        }
+      }
+    >
+      0
+       
+      Comments
+    </span>
+  </div>
+</div>
+`;

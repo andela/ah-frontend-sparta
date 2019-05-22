@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import store from '../../../store';
 import { SingleArticles } from '../index';
 
@@ -22,12 +22,22 @@ describe('Single Article page', () => {
         slug: 'new-slug',
       },
     },
-
+    count: '',
+    likeArticle: jest.fn(),
+    likeAnArticle: jest.fn(),
+    dislikeAnArticle: jest.fn(),
+    nextProps: {
+      likeDislike: {
+        likes: 0,
+      },
+    },
   };
   let instance;
   let wrapper;
   beforeEach(() => {
     wrapper = shallow(<SingleArticles {...props} />);
+    instance = wrapper.instance();
+    wrapper.instance().setState = jest.fn();
   });
 
   it('should render without crashing', () => {
@@ -39,7 +49,6 @@ describe('Single Article page', () => {
     shallow(<SingleArticles {...props} />);
     expect(spy).toHaveBeenCalledTimes(1);
   });
-
   it('onCommentChanged test', () => {
     instance = wrapper.instance();
     const event = {
@@ -62,12 +71,12 @@ describe('Single Article page', () => {
     instance.onChangeComment(event);
   });
 
-  it('showReplies test', () => {
-    instance = wrapper.instance();
-    instance.setState({ repliesDisplayState2: true });
-    instance.showReplies(2);
-    expect(instance.state.repliesDisplayState2).toBe(false);
-  });
+  // it('showReplies test', () => {
+  //   instance = wrapper.instance();
+  //   instance.setState({ repliesDisplayState2: true });
+  //   instance.showReplies(2);
+  //   expect(instance.state.repliesDisplayState2).toBe(false);
+  // });
 
   it('postReplyToComment test', () => {
     instance = wrapper.instance();
@@ -89,5 +98,22 @@ describe('Single Article page', () => {
     instance.updateComment(2);
     instance.setState({ commentToArticle: true });
     instance.updateComment(2);
+  });
+  it('likeAnArticle Method Called', () => {
+    instance.likeArticle();
+    expect(props.likeAnArticle).toHaveBeenCalled();
+  });
+  it('dislikeAnArticle Method Called', () => {
+    instance.dislikeArticle();
+    expect(props.dislikeAnArticle).toHaveBeenCalled();
+  });
+  it('componentWillReceiveProps Method Called', () => {
+    instance.componentWillReceiveProps(props.nextProps);
+    expect(props.getArticle).toHaveBeenCalled();
+    expect(props.count).toBeDefined();
+  });
+  it('get article has been called', () => {
+    props.getArticle(props.slug);
+    expect(props.getArticle).toHaveBeenCalledTimes(2);
   });
 });
