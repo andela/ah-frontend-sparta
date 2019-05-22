@@ -6,4 +6,12 @@
 .pagination-buttons {
     display: flex;
     justify-content: space-between;
+    
+}
+.article-btns{
+    position: fixed;
+    bottom: 1vh;
+    overflow: auto;
+    width: 90vw;
+    padding-left: 200px;
 }

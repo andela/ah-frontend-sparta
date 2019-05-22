@@ -37,7 +37,7 @@ export class Dashboard extends React.Component {
     return (
       <div>
         {paginateArticles.length === 0 ? <DashboardArticles firstArticles={firstArticles} totalArticles={articles} /> : <DashboardArticles paginateArticles={paginateArticles} firstArticles={firstArticles} totalArticles={articles} />}
-        <div className="container pagination-buttons">
+        <div className="container pagination-buttons article-btns">
           {prev ? (
             <button type="button" className="btn left pagButton" onClick={this.fetchPrevious}>
               Previous

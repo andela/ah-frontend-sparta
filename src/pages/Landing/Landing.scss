@@ -7,7 +7,6 @@ h1 {
 }
 .btn{
   font-size: 1rem;
-  background-color: #172439;
   color: #f8f9fa;
   align-content: center;
 }
@@ -444,8 +443,17 @@ h1 {
   
  
 }
+.article-btns{
+    position: fixed;
+    bottom: 1vh;
+    overflow: auto;
+    width: 90vw;
+    padding-left: 300px;
+}
 .pagButton {
     &:hover {
         color: aliceblue
     }
+  background-color: #172439;
+
 }

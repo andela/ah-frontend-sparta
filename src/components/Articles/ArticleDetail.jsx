@@ -3,6 +3,7 @@ import PropTypes, { shape } from 'prop-types';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
 import Comments from '../../pages/Comments';
+import RatingContainer from '../../pages/Ratings';
 import DeleteArticleComponentModel from './DeleteArticleModel';
 import ShareArticlesComponent from './ShareArticles';
 import avartaImage from '../../assets/images/avarta.png';
@@ -74,6 +75,7 @@ const ArticleDetail = ({
 
             </h6>
             <br />
+            <br />
             <p className="card-text article-text">
               { article.body }
             </p>
@@ -91,6 +93,8 @@ const ArticleDetail = ({
                   {tag}
                 </span>
               ))}
+              <br />
+              <RatingContainer slug={article.slug} />
             </p>
             {article.author && article.author.username
             === localStorage.getItem('username')
