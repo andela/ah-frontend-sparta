@@ -1,0 +1,19 @@
+@import '../../assets/scss/shared.scss';
+
+.commentReplyTextarea {
+	background-color: rgba(0, 0, 0, 0.03);
+	border-color: #172439;
+	border-radius: rem(2);
+}
+
+.commentReplyButtn {
+	margin-top: rem(5);
+	float: right;
+	font-size: rem(14);
+	outline: transparent;
+	color: #ffff;
+	background-color: #172439;
+	border-radius: rem(5);
+	padding: rem(8) rem(14);
+	border-width: 0;
+}

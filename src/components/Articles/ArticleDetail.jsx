@@ -2,11 +2,24 @@ import React from 'react';
 import PropTypes, { shape } from 'prop-types';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
+import Comments from '../../pages/Comments';
 import DeleteArticleComponentModel from './DeleteArticleModel';
 import avartaImage from '../../assets/images/avarta.png';
 import './article.scss';
 
-const ArticleDetail = ({ article, deleteAnArticle }) => (
+const ArticleDetail = ({
+  article,
+  deleteAnArticle,
+  comments,
+  showReplies,
+  replyDisplayState,
+  postReplyToComment,
+  onCommentChanged,
+  postComment,
+  deleteComment,
+  updateComment,
+  onChangeComment,
+}) => (
   <div className="container article-detail-container">
     <div className="row">
       <div className="col-md-12">
@@ -86,7 +99,7 @@ const ArticleDetail = ({ article, deleteAnArticle }) => (
               )
               : ''
 
-          }
+            }
             <DeleteArticleComponentModel
               title={article.title}
               slug={article.slug}
@@ -94,6 +107,7 @@ const ArticleDetail = ({ article, deleteAnArticle }) => (
               article.author && article.author.username}
               deleteAnArticle={deleteAnArticle}
             />
+            <Comments comments={comments} showReplies={showReplies} replyDisplayState={replyDisplayState} slug={article.slug} postReplyToComment={postReplyToComment} onCommentChanged={onCommentChanged} postComment={postComment} deleteComment={deleteComment} updateComment={updateComment} onChangeComment={onChangeComment} />
           </div>
         </div>
       </div>
