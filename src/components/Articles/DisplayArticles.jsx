@@ -1,9 +1,8 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes, { shape } from 'prop-types';
 import ArticleIconsComponent from './articlesIcons';
-
+import './article.scss';
 
 const DisplayArticles = ({ article, articleDate }) => (
   <div className="row">
@@ -27,6 +26,20 @@ const DisplayArticles = ({ article, articleDate }) => (
               {' '}
               <b>{article.author.username}</b>
             </p>
+            {article.average_rating <= 0 ? ''
+              : (
+                <div className="ratingStar">
+                  <i className="fas fa-star" />
+                  {' '}
+                  <span className="rating-digit">
+                    ratings
+                    {' '}
+                    {article.average_rating}
+                  </span>
+                </div>
+              )
+            }
+            <br />
             <div className="card-footer custom-footer">
               <Link
                 to={{
@@ -34,11 +47,11 @@ const DisplayArticles = ({ article, articleDate }) => (
                 }}
                 className="btn btn-primary float-left read-more-button"
               >
-              Read More ...
+                Read More ...
               </Link>
-              <p className="float-right">
+              <div className="float-right">
                 <ArticleIconsComponent article={article} />
-              </p>
+              </div>
             </div>
 
           </div>

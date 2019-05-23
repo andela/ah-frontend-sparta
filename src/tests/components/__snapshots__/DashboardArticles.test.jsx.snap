@@ -72,6 +72,8 @@ exports[`Dashboard Articles Component Should render without crashing 1`] = `
                   rogha
                 </b>
               </p>
+              
+              <br />
               <div
                 className="card-footer custom-footer"
               >
@@ -82,7 +84,7 @@ exports[`Dashboard Articles Component Should render without crashing 1`] = `
                 >
                   Read More ...
                 </a>
-                <p
+                <div
                   className="float-right"
                 >
                   <div
@@ -159,7 +161,7 @@ exports[`Dashboard Articles Component Should render without crashing 1`] = `
                     </a>
                        
                   </div>
-                </p>
+                </div>
               </div>
             </div>
           </div>
@@ -225,6 +227,8 @@ exports[`Dashboard Articles Component Should render without crashing 1`] = `
                   rogha
                 </b>
               </p>
+              
+              <br />
               <div
                 className="card-footer custom-footer"
               >
@@ -235,7 +239,7 @@ exports[`Dashboard Articles Component Should render without crashing 1`] = `
                 >
                   Read More ...
                 </a>
-                <p
+                <div
                   className="float-right"
                 >
                   <div
@@ -312,7 +316,7 @@ exports[`Dashboard Articles Component Should render without crashing 1`] = `
                     </a>
                        
                   </div>
-                </p>
+                </div>
               </div>
             </div>
           </div>
@@ -378,6 +382,8 @@ exports[`Dashboard Articles Component Should render without crashing 1`] = `
                   rogha
                 </b>
               </p>
+              
+              <br />
               <div
                 className="card-footer custom-footer"
               >
@@ -388,7 +394,7 @@ exports[`Dashboard Articles Component Should render without crashing 1`] = `
                 >
                   Read More ...
                 </a>
-                <p
+                <div
                   className="float-right"
                 >
                   <div
@@ -465,7 +471,7 @@ exports[`Dashboard Articles Component Should render without crashing 1`] = `
                     </a>
                        
                   </div>
-                </p>
+                </div>
               </div>
             </div>
           </div>
@@ -531,6 +537,8 @@ exports[`Dashboard Articles Component Should render without crashing 1`] = `
                   rogha
                 </b>
               </p>
+              
+              <br />
               <div
                 className="card-footer custom-footer"
               >
@@ -541,7 +549,7 @@ exports[`Dashboard Articles Component Should render without crashing 1`] = `
                 >
                   Read More ...
                 </a>
-                <p
+                <div
                   className="float-right"
                 >
                   <div
@@ -618,7 +626,7 @@ exports[`Dashboard Articles Component Should render without crashing 1`] = `
                     </a>
                        
                   </div>
-                </p>
+                </div>
               </div>
             </div>
           </div>
@@ -684,6 +692,8 @@ exports[`Dashboard Articles Component Should render without crashing 1`] = `
                   rogha
                 </b>
               </p>
+              
+              <br />
               <div
                 className="card-footer custom-footer"
               >
@@ -694,7 +704,7 @@ exports[`Dashboard Articles Component Should render without crashing 1`] = `
                 >
                   Read More ...
                 </a>
-                <p
+                <div
                   className="float-right"
                 >
                   <div
@@ -771,7 +781,7 @@ exports[`Dashboard Articles Component Should render without crashing 1`] = `
                     </a>
                        
                   </div>
-                </p>
+                </div>
               </div>
             </div>
           </div>
@@ -837,6 +847,8 @@ exports[`Dashboard Articles Component Should render without crashing 1`] = `
                   rogha
                 </b>
               </p>
+              
+              <br />
               <div
                 className="card-footer custom-footer"
               >
@@ -847,7 +859,7 @@ exports[`Dashboard Articles Component Should render without crashing 1`] = `
                 >
                   Read More ...
                 </a>
-                <p
+                <div
                   className="float-right"
                 >
                   <div
@@ -924,7 +936,7 @@ exports[`Dashboard Articles Component Should render without crashing 1`] = `
                     </a>
                        
                   </div>
-                </p>
+                </div>
               </div>
             </div>
           </div>
@@ -990,6 +1002,8 @@ exports[`Dashboard Articles Component Should render without crashing 1`] = `
                   rogha
                 </b>
               </p>
+              
+              <br />
               <div
                 className="card-footer custom-footer"
               >
@@ -1000,7 +1014,7 @@ exports[`Dashboard Articles Component Should render without crashing 1`] = `
                 >
                   Read More ...
                 </a>
-                <p
+                <div
                   className="float-right"
                 >
                   <div
@@ -1077,7 +1091,7 @@ exports[`Dashboard Articles Component Should render without crashing 1`] = `
                     </a>
                        
                   </div>
-                </p>
+                </div>
               </div>
             </div>
           </div>

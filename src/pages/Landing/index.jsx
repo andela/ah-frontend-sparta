@@ -6,6 +6,7 @@ import LandingImage from '../../assets/images/landing_image.jpg';
 import { fetchArticles } from '../../actions/articlesActions';
 import { getOriginal, getNext } from '../../actions/paginationActions';
 import './Landing.scss';
+import '../../components/Articles/article.scss';
 
 export class Landing extends Component {
   componentDidMount() {
@@ -50,22 +51,22 @@ export class Landing extends Component {
             <br />
           </div>
         </div>
-        <div className="container pagination-buttons">
+        <div className="article-btns">
           {prev ? (
-            <button type="button" className="btn left pagButton" onClick={this.fetchPrevious}>
+            <button type="button" className="btn float-left pagButton" onClick={this.fetchPrevious}>
               Previous
             </button>
           ) : (
-            <button type="button" className="btn left pagButton" disabled>
+            <button type="button" className="btn float-left pagButton" disabled>
                 Previous
             </button>
           )}
           {next ? (
-            <button type="button" className="btn right pagButton" onClick={this.fetchData}>
+            <button type="button" className="btn float-right pagButton" onClick={this.fetchData}>
               Next
             </button>
           ) : (
-            <button type="button" className="btn right pagButton" disabled>
+            <button type="button" className="btn float-right pagButton" disabled>
                 Next
             </button>
           )}

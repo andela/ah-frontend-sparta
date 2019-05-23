@@ -8,6 +8,8 @@ import profileReducer from './profileReducer';
 import pageStateReducer from './paginationReducer';
 import commentsReducer from './commentsReducer';
 import likeDislikeReducer from './likeDislikeReducer';
+import ratingsReducers from './ratingsReducers';
+
 
 export default combineReducers({
   auth: authReducer,
@@ -21,4 +23,5 @@ export default combineReducers({
   pageState: pageStateReducer,
   comments: commentsReducer,
   likeDislike: likeDislikeReducer,
+  ratingsReducers,
 });

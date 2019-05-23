@@ -76,7 +76,7 @@ export const postArticle = (
     notify.show('Errors have occured', 'error', 4000);
   });
 
-export const fetchArticles = () => dispatch => axios.get(`${baseURL}/articles/`)
+export const fetchArticles = () => dispatch => axios.get(`${process.env.baseURL}/articles/`)
   .then((response) => {
     dispatch({
       type: GET_ARTICLES,
@@ -84,7 +84,7 @@ export const fetchArticles = () => dispatch => axios.get(`${baseURL}/articles/`)
     });
   });
 
-export const getSingleArticle = slug => dispatch => axios.get(`${baseURL}/articles/${slug}`)
+export const getSingleArticle = slug => dispatch => axios.get(`${process.env.baseURL}/articles/${slug}`)
   .then((response) => {
     dispatch(fetchAnArticleSuccess(response));
   }).catch((err) => {

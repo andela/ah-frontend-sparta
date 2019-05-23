@@ -49,6 +49,7 @@ describe('Single Article page', () => {
     shallow(<SingleArticles {...props} />);
     expect(spy).toHaveBeenCalledTimes(1);
   });
+
   it('onCommentChanged test', () => {
     instance = wrapper.instance();
     const event = {

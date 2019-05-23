@@ -103,17 +103,17 @@ Array [
       </div>
     </div>
     <div
-      className="container pagination-buttons"
+      className="article-btns"
     >
       <button
-        className="btn left pagButton"
+        className="btn float-left pagButton"
         disabled={true}
         type="button"
       >
         Previous
       </button>
       <button
-        className="btn right pagButton"
+        className="btn float-right pagButton"
         disabled={true}
         type="button"
       >
