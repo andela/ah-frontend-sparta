@@ -4,6 +4,7 @@ import moment from 'moment';
 import { Link } from 'react-router-dom';
 import Comments from '../../pages/Comments';
 import DeleteArticleComponentModel from './DeleteArticleModel';
+import ShareArticlesComponent from './ShareArticles';
 import avartaImage from '../../assets/images/avarta.png';
 import './article.scss';
 
@@ -36,6 +37,9 @@ const ArticleDetail = ({
                   width="70px"
                   height="70px"
                 />
+              </div>
+              <div className="col-md-9 share-articles-div">
+                <ShareArticlesComponent article={article} />
               </div>
             </div>
             <br />

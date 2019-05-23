@@ -37,7 +37,7 @@ const DisplayArticles = ({ article, articleDate }) => (
               Read More ...
               </Link>
               <p className="float-right">
-                <ArticleIconsComponent />
+                <ArticleIconsComponent article={article} />
               </p>
             </div>
 

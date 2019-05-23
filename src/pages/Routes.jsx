@@ -41,6 +41,11 @@ class Routes extends Component {
             <Route path="/reset/:token/change/" component={ChangePassword} />
             <Route
               exact
+              path="/articles/:slug"
+              component={DisplayArticleComponent}
+            />
+            <Route
+              exact
               path="/dashboard"
               component={DashboardComponent}
             />

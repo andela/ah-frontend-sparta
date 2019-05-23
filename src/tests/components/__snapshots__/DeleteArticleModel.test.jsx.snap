@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Delete Article  Component Should render without crashing 1`] = `
+<div
+  aria-hidden="true"
+  aria-labelledby="deleteArticleModal"
+  className="modal fade"
+  id="deleteArticleModal"
+  role="dialog"
+  tabIndex="-1"
+>
+  <div
+    className="modal-dialog custom-model-dialog"
+    role="document"
+  >
+    <div
+      className="modal-content"
+    >
+      <div
+        className="modal-header"
+      >
+        <h5
+          className="modal-title"
+          id="exampleModalLabel"
+        >
+          Delete Article
+        </h5>
+        <button
+          aria-label="Close"
+          className="close"
+          data-dismiss="modal"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+          >
+            ×
+          </span>
+        </button>
+      </div>
+      <div
+        className="modal-body"
+      >
+        Are you sure , you want to delete ?
+        <br />
+        <b
+          className="delete-article-title"
+        >
+          Title :
+           
+          
+        </b>
+      </div>
+      <div
+        className="modal-footer"
+      >
+        <button
+          className="btn btn-success"
+          data-dismiss="modal"
+          id="cancelModal"
+          type="button"
+        >
+          Cancel
+        </button>
+        <button
+          className="btn btn-danger"
+          id="DeleteArticleBtn"
+          onClick={[Function]}
+          type="button"
+        >
+          Ok
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

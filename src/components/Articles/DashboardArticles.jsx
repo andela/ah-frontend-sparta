@@ -38,7 +38,6 @@ const DashboardArticles = ({ firstArticles, totalArticles }) => (
         <div>No Posts where Found !!!!</div>
       )}
   </div>
-
 );
 DashboardArticles.defaultProps = {
   totalArticles: [],

@@ -12,11 +12,1079 @@ exports[`Dashboard Articles Component Should render without crashing 1`] = `
     out of
      
     <strong>
-      0
+      7
     </strong>
   </p>
-  <div>
-    No Posts where Found !!!!
+  <div
+    className="container"
+    style={
+      Object {
+        "marginTop": "20px",
+      }
+    }
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-md-12"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="card col-md-12"
+            style={
+              Object {
+                "boxShadow": "5px 10px 18px #888888",
+              }
+            }
+          >
+            <h5
+              className="card-header"
+            >
+              Post one
+            </h5>
+            <div
+              className="card-body"
+            >
+              <h5
+                className="card-title"
+              >
+                Written on
+                 
+                April 18, 2019
+              </h5>
+              <p
+                className="card-text"
+              >
+                too long a story
+              </p>
+              <p
+                className="read_time"
+              />
+              <p
+                className="author_name"
+              >
+                Created By
+                 
+                <b>
+                  rogha
+                </b>
+              </p>
+              <div
+                className="card-footer custom-footer"
+              >
+                <a
+                  className="btn btn-primary float-left read-more-button"
+                  href="/articles/post-one-first"
+                  onClick={[Function]}
+                >
+                  Read More ...
+                </a>
+                <p
+                  className="float-right"
+                >
+                  <div
+                    className="icons"
+                  >
+                    <div
+                      className="btn-group dropleft"
+                    >
+                      <a
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        data-toggle="dropdown"
+                        href="sharing"
+                      >
+                        <i
+                          className="fas fa-share-alt-square"
+                        />
+                      </a>
+                      <div
+                        className="dropdown-menu"
+                      >
+                        <a
+                          className="dropdown-item"
+                          href="https://www.facebook.com/sharer/sharer.php?u=undefined/articles/post-one-first"
+                        >
+                          <i
+                            className="fab fa-facebook-square facebook-icon"
+                          />
+                          Facebook
+                        </a>
+                        <a
+                          className="dropdown-item"
+                          href="https://twitter.com/intent/tweet?url=undefined/articles/post-one-first&text=too long a story"
+                        >
+                          <i
+                            className="fab fa-twitter twitter-icon"
+                          />
+                          Twitter
+                        </a>
+                        <a
+                          className="dropdown-item"
+                          href="mailto:?Subject=Post%20one&body=I found this article to be worth reading, Post one undefined/articles/post-one-first"
+                        >
+                          <i
+                            className="fas fa-envelope-square envelop-icon"
+                          />
+                          Mail
+                        </a>
+                      </div>
+                    </div>
+                       
+                    <a
+                      href="comment"
+                    >
+                      <i
+                        className="far fa-comment"
+                      />
+                    </a>
+                       
+                    <a
+                      href="like"
+                    >
+                      <i
+                        className="far fa-thumbs-up pull float-right"
+                      />
+                    </a>
+                       
+                    <a
+                      href="dislike"
+                    >
+                      <i
+                        className="far fa-thumbs-down"
+                      />
+                    </a>
+                       
+                  </div>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+  </div>
+  <div
+    className="container"
+    style={
+      Object {
+        "marginTop": "20px",
+      }
+    }
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-md-12"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="card col-md-12"
+            style={
+              Object {
+                "boxShadow": "5px 10px 18px #888888",
+              }
+            }
+          >
+            <h5
+              className="card-header"
+            >
+              Post one
+            </h5>
+            <div
+              className="card-body"
+            >
+              <h5
+                className="card-title"
+              >
+                Written on
+                 
+                April 18, 2019
+              </h5>
+              <p
+                className="card-text"
+              >
+                too long a story
+              </p>
+              <p
+                className="read_time"
+              />
+              <p
+                className="author_name"
+              >
+                Created By
+                 
+                <b>
+                  rogha
+                </b>
+              </p>
+              <div
+                className="card-footer custom-footer"
+              >
+                <a
+                  className="btn btn-primary float-left read-more-button"
+                  href="/articles/post-one-first"
+                  onClick={[Function]}
+                >
+                  Read More ...
+                </a>
+                <p
+                  className="float-right"
+                >
+                  <div
+                    className="icons"
+                  >
+                    <div
+                      className="btn-group dropleft"
+                    >
+                      <a
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        data-toggle="dropdown"
+                        href="sharing"
+                      >
+                        <i
+                          className="fas fa-share-alt-square"
+                        />
+                      </a>
+                      <div
+                        className="dropdown-menu"
+                      >
+                        <a
+                          className="dropdown-item"
+                          href="https://www.facebook.com/sharer/sharer.php?u=undefined/articles/post-one-first"
+                        >
+                          <i
+                            className="fab fa-facebook-square facebook-icon"
+                          />
+                          Facebook
+                        </a>
+                        <a
+                          className="dropdown-item"
+                          href="https://twitter.com/intent/tweet?url=undefined/articles/post-one-first&text=too long a story"
+                        >
+                          <i
+                            className="fab fa-twitter twitter-icon"
+                          />
+                          Twitter
+                        </a>
+                        <a
+                          className="dropdown-item"
+                          href="mailto:?Subject=Post%20one&body=I found this article to be worth reading, Post one undefined/articles/post-one-first"
+                        >
+                          <i
+                            className="fas fa-envelope-square envelop-icon"
+                          />
+                          Mail
+                        </a>
+                      </div>
+                    </div>
+                       
+                    <a
+                      href="comment"
+                    >
+                      <i
+                        className="far fa-comment"
+                      />
+                    </a>
+                       
+                    <a
+                      href="like"
+                    >
+                      <i
+                        className="far fa-thumbs-up pull float-right"
+                      />
+                    </a>
+                       
+                    <a
+                      href="dislike"
+                    >
+                      <i
+                        className="far fa-thumbs-down"
+                      />
+                    </a>
+                       
+                  </div>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+  </div>
+  <div
+    className="container"
+    style={
+      Object {
+        "marginTop": "20px",
+      }
+    }
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-md-12"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="card col-md-12"
+            style={
+              Object {
+                "boxShadow": "5px 10px 18px #888888",
+              }
+            }
+          >
+            <h5
+              className="card-header"
+            >
+              Post one
+            </h5>
+            <div
+              className="card-body"
+            >
+              <h5
+                className="card-title"
+              >
+                Written on
+                 
+                April 18, 2019
+              </h5>
+              <p
+                className="card-text"
+              >
+                too long a story
+              </p>
+              <p
+                className="read_time"
+              />
+              <p
+                className="author_name"
+              >
+                Created By
+                 
+                <b>
+                  rogha
+                </b>
+              </p>
+              <div
+                className="card-footer custom-footer"
+              >
+                <a
+                  className="btn btn-primary float-left read-more-button"
+                  href="/articles/post-one-first"
+                  onClick={[Function]}
+                >
+                  Read More ...
+                </a>
+                <p
+                  className="float-right"
+                >
+                  <div
+                    className="icons"
+                  >
+                    <div
+                      className="btn-group dropleft"
+                    >
+                      <a
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        data-toggle="dropdown"
+                        href="sharing"
+                      >
+                        <i
+                          className="fas fa-share-alt-square"
+                        />
+                      </a>
+                      <div
+                        className="dropdown-menu"
+                      >
+                        <a
+                          className="dropdown-item"
+                          href="https://www.facebook.com/sharer/sharer.php?u=undefined/articles/post-one-first"
+                        >
+                          <i
+                            className="fab fa-facebook-square facebook-icon"
+                          />
+                          Facebook
+                        </a>
+                        <a
+                          className="dropdown-item"
+                          href="https://twitter.com/intent/tweet?url=undefined/articles/post-one-first&text=too long a story"
+                        >
+                          <i
+                            className="fab fa-twitter twitter-icon"
+                          />
+                          Twitter
+                        </a>
+                        <a
+                          className="dropdown-item"
+                          href="mailto:?Subject=Post%20one&body=I found this article to be worth reading, Post one undefined/articles/post-one-first"
+                        >
+                          <i
+                            className="fas fa-envelope-square envelop-icon"
+                          />
+                          Mail
+                        </a>
+                      </div>
+                    </div>
+                       
+                    <a
+                      href="comment"
+                    >
+                      <i
+                        className="far fa-comment"
+                      />
+                    </a>
+                       
+                    <a
+                      href="like"
+                    >
+                      <i
+                        className="far fa-thumbs-up pull float-right"
+                      />
+                    </a>
+                       
+                    <a
+                      href="dislike"
+                    >
+                      <i
+                        className="far fa-thumbs-down"
+                      />
+                    </a>
+                       
+                  </div>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+  </div>
+  <div
+    className="container"
+    style={
+      Object {
+        "marginTop": "20px",
+      }
+    }
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-md-12"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="card col-md-12"
+            style={
+              Object {
+                "boxShadow": "5px 10px 18px #888888",
+              }
+            }
+          >
+            <h5
+              className="card-header"
+            >
+              Post one
+            </h5>
+            <div
+              className="card-body"
+            >
+              <h5
+                className="card-title"
+              >
+                Written on
+                 
+                April 18, 2019
+              </h5>
+              <p
+                className="card-text"
+              >
+                too long a story
+              </p>
+              <p
+                className="read_time"
+              />
+              <p
+                className="author_name"
+              >
+                Created By
+                 
+                <b>
+                  rogha
+                </b>
+              </p>
+              <div
+                className="card-footer custom-footer"
+              >
+                <a
+                  className="btn btn-primary float-left read-more-button"
+                  href="/articles/post-one-first"
+                  onClick={[Function]}
+                >
+                  Read More ...
+                </a>
+                <p
+                  className="float-right"
+                >
+                  <div
+                    className="icons"
+                  >
+                    <div
+                      className="btn-group dropleft"
+                    >
+                      <a
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        data-toggle="dropdown"
+                        href="sharing"
+                      >
+                        <i
+                          className="fas fa-share-alt-square"
+                        />
+                      </a>
+                      <div
+                        className="dropdown-menu"
+                      >
+                        <a
+                          className="dropdown-item"
+                          href="https://www.facebook.com/sharer/sharer.php?u=undefined/articles/post-one-first"
+                        >
+                          <i
+                            className="fab fa-facebook-square facebook-icon"
+                          />
+                          Facebook
+                        </a>
+                        <a
+                          className="dropdown-item"
+                          href="https://twitter.com/intent/tweet?url=undefined/articles/post-one-first&text=too long a story"
+                        >
+                          <i
+                            className="fab fa-twitter twitter-icon"
+                          />
+                          Twitter
+                        </a>
+                        <a
+                          className="dropdown-item"
+                          href="mailto:?Subject=Post%20one&body=I found this article to be worth reading, Post one undefined/articles/post-one-first"
+                        >
+                          <i
+                            className="fas fa-envelope-square envelop-icon"
+                          />
+                          Mail
+                        </a>
+                      </div>
+                    </div>
+                       
+                    <a
+                      href="comment"
+                    >
+                      <i
+                        className="far fa-comment"
+                      />
+                    </a>
+                       
+                    <a
+                      href="like"
+                    >
+                      <i
+                        className="far fa-thumbs-up pull float-right"
+                      />
+                    </a>
+                       
+                    <a
+                      href="dislike"
+                    >
+                      <i
+                        className="far fa-thumbs-down"
+                      />
+                    </a>
+                       
+                  </div>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+  </div>
+  <div
+    className="container"
+    style={
+      Object {
+        "marginTop": "20px",
+      }
+    }
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-md-12"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="card col-md-12"
+            style={
+              Object {
+                "boxShadow": "5px 10px 18px #888888",
+              }
+            }
+          >
+            <h5
+              className="card-header"
+            >
+              Post one
+            </h5>
+            <div
+              className="card-body"
+            >
+              <h5
+                className="card-title"
+              >
+                Written on
+                 
+                April 18, 2019
+              </h5>
+              <p
+                className="card-text"
+              >
+                too long a story
+              </p>
+              <p
+                className="read_time"
+              />
+              <p
+                className="author_name"
+              >
+                Created By
+                 
+                <b>
+                  rogha
+                </b>
+              </p>
+              <div
+                className="card-footer custom-footer"
+              >
+                <a
+                  className="btn btn-primary float-left read-more-button"
+                  href="/articles/post-one-first"
+                  onClick={[Function]}
+                >
+                  Read More ...
+                </a>
+                <p
+                  className="float-right"
+                >
+                  <div
+                    className="icons"
+                  >
+                    <div
+                      className="btn-group dropleft"
+                    >
+                      <a
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        data-toggle="dropdown"
+                        href="sharing"
+                      >
+                        <i
+                          className="fas fa-share-alt-square"
+                        />
+                      </a>
+                      <div
+                        className="dropdown-menu"
+                      >
+                        <a
+                          className="dropdown-item"
+                          href="https://www.facebook.com/sharer/sharer.php?u=undefined/articles/post-one-first"
+                        >
+                          <i
+                            className="fab fa-facebook-square facebook-icon"
+                          />
+                          Facebook
+                        </a>
+                        <a
+                          className="dropdown-item"
+                          href="https://twitter.com/intent/tweet?url=undefined/articles/post-one-first&text=too long a story"
+                        >
+                          <i
+                            className="fab fa-twitter twitter-icon"
+                          />
+                          Twitter
+                        </a>
+                        <a
+                          className="dropdown-item"
+                          href="mailto:?Subject=Post%20one&body=I found this article to be worth reading, Post one undefined/articles/post-one-first"
+                        >
+                          <i
+                            className="fas fa-envelope-square envelop-icon"
+                          />
+                          Mail
+                        </a>
+                      </div>
+                    </div>
+                       
+                    <a
+                      href="comment"
+                    >
+                      <i
+                        className="far fa-comment"
+                      />
+                    </a>
+                       
+                    <a
+                      href="like"
+                    >
+                      <i
+                        className="far fa-thumbs-up pull float-right"
+                      />
+                    </a>
+                       
+                    <a
+                      href="dislike"
+                    >
+                      <i
+                        className="far fa-thumbs-down"
+                      />
+                    </a>
+                       
+                  </div>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+  </div>
+  <div
+    className="container"
+    style={
+      Object {
+        "marginTop": "20px",
+      }
+    }
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-md-12"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="card col-md-12"
+            style={
+              Object {
+                "boxShadow": "5px 10px 18px #888888",
+              }
+            }
+          >
+            <h5
+              className="card-header"
+            >
+              Post one
+            </h5>
+            <div
+              className="card-body"
+            >
+              <h5
+                className="card-title"
+              >
+                Written on
+                 
+                April 18, 2019
+              </h5>
+              <p
+                className="card-text"
+              >
+                too long a story
+              </p>
+              <p
+                className="read_time"
+              />
+              <p
+                className="author_name"
+              >
+                Created By
+                 
+                <b>
+                  rogha
+                </b>
+              </p>
+              <div
+                className="card-footer custom-footer"
+              >
+                <a
+                  className="btn btn-primary float-left read-more-button"
+                  href="/articles/post-one-first"
+                  onClick={[Function]}
+                >
+                  Read More ...
+                </a>
+                <p
+                  className="float-right"
+                >
+                  <div
+                    className="icons"
+                  >
+                    <div
+                      className="btn-group dropleft"
+                    >
+                      <a
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        data-toggle="dropdown"
+                        href="sharing"
+                      >
+                        <i
+                          className="fas fa-share-alt-square"
+                        />
+                      </a>
+                      <div
+                        className="dropdown-menu"
+                      >
+                        <a
+                          className="dropdown-item"
+                          href="https://www.facebook.com/sharer/sharer.php?u=undefined/articles/post-one-first"
+                        >
+                          <i
+                            className="fab fa-facebook-square facebook-icon"
+                          />
+                          Facebook
+                        </a>
+                        <a
+                          className="dropdown-item"
+                          href="https://twitter.com/intent/tweet?url=undefined/articles/post-one-first&text=too long a story"
+                        >
+                          <i
+                            className="fab fa-twitter twitter-icon"
+                          />
+                          Twitter
+                        </a>
+                        <a
+                          className="dropdown-item"
+                          href="mailto:?Subject=Post%20one&body=I found this article to be worth reading, Post one undefined/articles/post-one-first"
+                        >
+                          <i
+                            className="fas fa-envelope-square envelop-icon"
+                          />
+                          Mail
+                        </a>
+                      </div>
+                    </div>
+                       
+                    <a
+                      href="comment"
+                    >
+                      <i
+                        className="far fa-comment"
+                      />
+                    </a>
+                       
+                    <a
+                      href="like"
+                    >
+                      <i
+                        className="far fa-thumbs-up pull float-right"
+                      />
+                    </a>
+                       
+                    <a
+                      href="dislike"
+                    >
+                      <i
+                        className="far fa-thumbs-down"
+                      />
+                    </a>
+                       
+                  </div>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+  </div>
+  <div
+    className="container"
+    style={
+      Object {
+        "marginTop": "20px",
+      }
+    }
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-md-12"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="card col-md-12"
+            style={
+              Object {
+                "boxShadow": "5px 10px 18px #888888",
+              }
+            }
+          >
+            <h5
+              className="card-header"
+            >
+              Post one
+            </h5>
+            <div
+              className="card-body"
+            >
+              <h5
+                className="card-title"
+              >
+                Written on
+                 
+                April 18, 2019
+              </h5>
+              <p
+                className="card-text"
+              >
+                too long a story
+              </p>
+              <p
+                className="read_time"
+              />
+              <p
+                className="author_name"
+              >
+                Created By
+                 
+                <b>
+                  rogha
+                </b>
+              </p>
+              <div
+                className="card-footer custom-footer"
+              >
+                <a
+                  className="btn btn-primary float-left read-more-button"
+                  href="/articles/post-one-first"
+                  onClick={[Function]}
+                >
+                  Read More ...
+                </a>
+                <p
+                  className="float-right"
+                >
+                  <div
+                    className="icons"
+                  >
+                    <div
+                      className="btn-group dropleft"
+                    >
+                      <a
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        data-toggle="dropdown"
+                        href="sharing"
+                      >
+                        <i
+                          className="fas fa-share-alt-square"
+                        />
+                      </a>
+                      <div
+                        className="dropdown-menu"
+                      >
+                        <a
+                          className="dropdown-item"
+                          href="https://www.facebook.com/sharer/sharer.php?u=undefined/articles/post-one-first"
+                        >
+                          <i
+                            className="fab fa-facebook-square facebook-icon"
+                          />
+                          Facebook
+                        </a>
+                        <a
+                          className="dropdown-item"
+                          href="https://twitter.com/intent/tweet?url=undefined/articles/post-one-first&text=too long a story"
+                        >
+                          <i
+                            className="fab fa-twitter twitter-icon"
+                          />
+                          Twitter
+                        </a>
+                        <a
+                          className="dropdown-item"
+                          href="mailto:?Subject=Post%20one&body=I found this article to be worth reading, Post one undefined/articles/post-one-first"
+                        >
+                          <i
+                            className="fas fa-envelope-square envelop-icon"
+                          />
+                          Mail
+                        </a>
+                      </div>
+                    </div>
+                       
+                    <a
+                      href="comment"
+                    >
+                      <i
+                        className="far fa-comment"
+                      />
+                    </a>
+                       
+                    <a
+                      href="like"
+                    >
+                      <i
+                        className="far fa-thumbs-up pull float-right"
+                      />
+                    </a>
+                       
+                    <a
+                      href="dislike"
+                    >
+                      <i
+                        className="far fa-thumbs-down"
+                      />
+                    </a>
+                       
+                  </div>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
   </div>
 </div>
 `;
