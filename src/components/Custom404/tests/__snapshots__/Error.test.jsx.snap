@@ -1,3 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Error page should render without failing 1`] = `ShallowWrapper {}`;
+exports[`Error page should render without failing 1`] = `
+Array [
+  <div
+    className="heading-error"
+  >
+    <h3>
+      OOPS!! There is nothing here
+    </h3>
+  </div>,
+  <div
+    className="to-dashboard"
+  >
+    <a
+      href="/dashboard"
+      onClick={[Function]}
+    >
+      <h6>
+        Back to Dashboard
+      </h6>
+    </a>
+  </div>,
+]
+`;

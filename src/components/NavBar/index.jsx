@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link, withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { getArticleFromSearch } from '../../actions/searchActions';
 import NavBarAccountSection from '../NavBarAccountSection';
 import Logo from '../../assets/images/logo.png';
 import './NavBar.scss';
+import Search from '../Search/Search';
 
 const token = localStorage.getItem('accessToken');
 
 export class Navbar extends Component {
+  state = {
+    query: '',
+  }
+
   logout = () => {
     const { history } = this.props;
     localStorage.removeItem('accessToken');
@@ -15,6 +22,20 @@ export class Navbar extends Component {
     localStorage.removeItem('username');
     localStorage.removeItem('userAuthenticated');
     history.push('/login');
+  }
+
+  handleChange = (event) => {
+    event.preventDefault();
+    this.setState({
+      [event.target.name]: event.target.value,
+    });
+  }
+
+  handleSearch=(event) => {
+    event.preventDefault();
+    const { getSearch } = this.props;
+    const { query } = this.state;
+    getSearch(query);
   }
 
   render() {
@@ -31,9 +52,12 @@ export class Navbar extends Component {
               && (
               <ul>
                 <li>
-                  <form>
-                    <input type="text" placeholder="SEARCH" />
-                  </form>
+                  <Search
+                    handleChange={this.handleChange}
+                    query={this.state.query}
+                    handleSearch={this.handleSearch}
+                    id="search"
+                  />
                 </li>
                 <li className="nav-item">
                   <a href="/article/create">Add Article</a>
@@ -58,7 +82,15 @@ export class Navbar extends Component {
   }
 }
 
-export default withRouter(Navbar);
+const mapStateProps = state => ({
+  searchedArticles: state.search,
+});
+
+export default withRouter(
+  connect(mapStateProps, {
+    getSearch: getArticleFromSearch,
+  })(Navbar),
+);
 
 Navbar.propTypes = {
   history: PropTypes.objectOf,
