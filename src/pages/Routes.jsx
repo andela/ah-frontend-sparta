@@ -14,6 +14,7 @@ import ChangePassword from './PasswordReset';
 import DashboardComponent from './Dashboard';
 import DisplayArticleComponent from './singleArticle';
 import EditArticleComponent from './singleArticle/EditArticle';
+import Error from '../components/Custom404/Error';
 
 class Routes extends Component {
   constructor(props) {
@@ -39,7 +40,7 @@ class Routes extends Component {
             <Route path="/login" component={SigninComponent} />
             <Route path="/password-reset/" component={ResetPassword} />
             <Route path="/reset/:token/change/" component={ChangePassword} />
-            <Route
+            <PrivateRoute
               exact
               path="/articles/:slug"
               component={DisplayArticleComponent}
@@ -48,6 +49,7 @@ class Routes extends Component {
               exact
               path="/dashboard"
               component={DashboardComponent}
+              isLoggedIn={(localStorage.getItem('userAuthenticated'))}
             />
             <PrivateRoute
               exact
@@ -76,6 +78,7 @@ class Routes extends Component {
               component={EditProfile}
               isLoggedIn={(localStorage.getItem('userAuthenticated'))}
             />
+            <Route component={Error} />
           </Switch>
         </Router>
       </>
