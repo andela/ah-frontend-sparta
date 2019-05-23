@@ -80,26 +80,31 @@ describe('Single Article page', () => {
   // });
 
   it('postReplyToComment test', () => {
-    instance = wrapper.instance();
     instance.postReplyToComment('article-slug', 2, 'this reply');
+    expect(props.replyToComment).toHaveBeenCalled();
   });
 
   it('postComment test', () => {
-    instance = wrapper.instance();
     instance.postComment();
+    expect(props.addCommentToArticle).toHaveBeenCalled();
   });
 
   it('deleteComment test', () => {
-    instance = wrapper.instance();
     instance.deleteComment('article-slug', 2);
+    expect(props.deleteArticleComment).toHaveBeenCalled();
   });
 
   it('updateComment test', () => {
-    instance = wrapper.instance();
+    wrapper.setState({ commentToArticle: true });
     instance.updateComment(2);
-    instance.setState({ commentToArticle: true });
-    instance.updateComment(2);
+    expect(props.updateArticleComment).toHaveBeenCalled();
   });
+
+  it('updateComment Not passing comment test', () => {
+    instance.updateComment(2);
+    expect(props.updateArticleComment).not.toHaveBeenCalled();
+  });
+
   it('likeAnArticle Method Called', () => {
     instance.likeArticle();
     expect(props.likeAnArticle).toHaveBeenCalled();

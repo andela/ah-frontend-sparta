@@ -6,6 +6,7 @@ import {
   postArticle,
   deleteSingleArticle,
   editSingleArticle,
+  fetchReadingStatsActions,
 } from '../../actions/articlesActions';
 import {
   POST_ARTICLE_FAILURE,
@@ -276,6 +277,32 @@ describe('Testing Articles', () => {
     return store.dispatch(editSingleArticle(articleData, historyMock, slug)).then(() => {
       const dispatchedActions = store.getActions();
       expect(dispatchedActions).toEqual(expectedActions);
+    });
+  });
+
+  it('Testing fetch reading stats', () => {
+    const expectedResponse = {
+      read_stats: [],
+    };
+
+
+    const expectedPayload = [{
+      payload: [],
+      type: 'FETCH_READ_STATS',
+    }];
+
+    moxios.wait(() => {
+      const request = moxios.requests.mostRecent();
+      request.respondWith({
+        status: 200,
+        response: expectedResponse,
+      });
+    });
+
+    const store = mockStore({});
+    return store.dispatch(fetchReadingStatsActions()).then(() => {
+      const dispatchedActions = store.getActions();
+      expect(dispatchedActions).toEqual(expectedPayload);
     });
   });
 });

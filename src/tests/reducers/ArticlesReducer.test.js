@@ -201,4 +201,17 @@ describe('Articles Reducer', () => {
     const newState = paginateArticles(initialState, action);
     expect(newState).toEqual(expectation);
   });
+
+  it('test get reading stats', () => {
+    const initialState = [];
+    const expectation = { readingStats: [] };
+
+    const action = {
+      type: 'FETCH_READ_STATS',
+      payload: [],
+    };
+
+    const newState = articlesReducer(initialState, action);
+    expect(newState).toEqual(expectation);
+  });
 });

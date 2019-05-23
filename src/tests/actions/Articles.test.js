@@ -2,6 +2,7 @@ import moxios from 'moxios';
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import axios from 'axios';
+import axiosInstance from '../../helpers/axiosInstance';
 import {
   fetchArticles,
   getSingleArticle,
@@ -22,8 +23,8 @@ describe('Testing Articles', () => {
 
   const mockStore = configureMockStore(middlewares);
 
-  beforeEach(() => moxios.install(axios));
-  afterEach(() => moxios.uninstall(axios));
+  beforeEach(() => moxios.install(axiosInstance));
+  afterEach(() => moxios.uninstall(axiosInstance));
 
 
   it('Testing get a single Article success', () => {
@@ -84,6 +85,15 @@ describe('Testing Articles', () => {
       expect(dispatchedActions).toEqual(expectedActions);
     });
   });
+});
+
+describe('Testing fetch all Articles', () => {
+  const middlewares = [thunk];
+
+  const mockStore = configureMockStore(middlewares);
+
+  beforeEach(() => moxios.install(axios));
+  afterEach(() => moxios.uninstall(axios));
 
   it('Testing getting all  Articles', () => {
     const expectedResponse = {

@@ -15,6 +15,7 @@ import DashboardComponent from './Dashboard';
 import DisplayArticleComponent from './singleArticle';
 import EditArticleComponent from './singleArticle/EditArticle';
 import Error from '../components/Custom404/Error';
+import ReadingStats from './ReadingStats';
 
 class Routes extends Component {
   constructor(props) {
@@ -32,7 +33,7 @@ class Routes extends Component {
           <Switch>
             <Route exact path="/" component={LandingComponent} />
             <Route path="/register" component={SignupComponent} />
-            <PrivateRoute
+            <Route
               path="/articles/edit/:slug"
               component={EditArticleComponent}
               isLoggedIn={(localStorage.getItem('userAuthenticated'))}
@@ -40,12 +41,12 @@ class Routes extends Component {
             <Route path="/login" component={SigninComponent} />
             <Route path="/password-reset/" component={ResetPassword} />
             <Route path="/reset/:token/change/" component={ChangePassword} />
-            <PrivateRoute
+            <Route
               exact
               path="/articles/:slug"
               component={DisplayArticleComponent}
             />
-            <Route
+            <PrivateRoute
               exact
               path="/dashboard"
               component={DashboardComponent}
@@ -56,11 +57,6 @@ class Routes extends Component {
               path="/article/create"
               component={ArticlesComponent}
               isLoggedIn={(localStorage.getItem('userAuthenticated'))}
-            />
-            <Route
-              exact
-              path="/articles/:slug"
-              component={DisplayArticleComponent}
             />
             <PrivateRoute
               exact
@@ -76,6 +72,11 @@ class Routes extends Component {
             <PrivateRoute
               path="/editprofile"
               component={EditProfile}
+              isLoggedIn={(localStorage.getItem('userAuthenticated'))}
+            />
+            <PrivateRoute
+              path="/reading-stats"
+              component={ReadingStats}
               isLoggedIn={(localStorage.getItem('userAuthenticated'))}
             />
             <Route component={Error} />

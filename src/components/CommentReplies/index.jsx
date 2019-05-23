@@ -48,7 +48,7 @@ const CommentReplies = (
               type="button"
               className="dropdown-item"
               data-toggle="modal"
-              data-target="#exampleModalCenter"
+              data-target="#editCommentDialog"
             >
               Edit
             </button>

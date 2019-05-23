@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
+import { Link } from 'react-router-dom';
 import DisplayArticles from './DisplayArticles';
 import './article.scss';
 
@@ -8,15 +9,23 @@ import './article.scss';
 const DashboardArticles = ({ firstArticles, totalArticles }) => (
 
   <div>
-    <p className="text">
-      Showing
-      {' '}
-      <strong>{firstArticles && firstArticles.length}</strong>
-      {' '}
-      out of
-      {' '}
-      <strong>{totalArticles && totalArticles.length}</strong>
-    </p>
+    <div className="container">
+      <span className="text">
+        Showing
+        {' '}
+        <strong>{firstArticles && firstArticles.length}</strong>
+        {' '}
+        out of
+        {' '}
+        <strong>{totalArticles && totalArticles.length}</strong>
+      </span>
+      <a
+        className="readingStatsLink"
+        href="/reading-stats"
+      >
+        Check the Articles Reading Stats
+      </a>
+    </div>
     {
       totalArticles.length > 0 ? (
         totalArticles.map((article) => {
@@ -24,7 +33,7 @@ const DashboardArticles = ({ firstArticles, totalArticles }) => (
             'LL',
           );
           return (
-            <div key={article.id} className="container" style={{ marginTop: '20px' }}>
+            <div key={article.id} className="container" style={{ marginTop: '20px', clear: 'both' }}>
               <DisplayArticles
                 article={article}
                 articleDate={articleDate}
