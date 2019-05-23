@@ -1,0 +1,17 @@
+.heading-error {
+    display: flex;
+}
+
+.heading-error {
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 12.5rem;
+}
+
+.to-dashboard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+}
