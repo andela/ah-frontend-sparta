@@ -12,7 +12,12 @@ import {
   ORIGINAL,
 } from '../actions/types';
 
-const initialState = { error: undefined, article: undefined, articles: [] };
+const initialState = {
+  error: undefined,
+  article: undefined,
+  articles: [],
+  readingStats: [],
+};
 
 export default (state = initialState, action) => {
   switch (action.type) {
@@ -69,6 +74,11 @@ export default (state = initialState, action) => {
         article: undefined,
         articles: action.payload,
         error: undefined,
+      };
+    case 'FETCH_READ_STATS':
+      return {
+        ...state,
+        readingStats: action.payload,
       };
     default:
       return state;

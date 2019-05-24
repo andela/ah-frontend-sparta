@@ -21,7 +21,7 @@ export class Navbar extends Component {
     return (
       <div className="nav">
         <div className="nav-logo">
-          <Link to="/">
+          <Link to="/dashboard">
             <img src={Logo} alt="site logo" />
           </Link>
         </div>

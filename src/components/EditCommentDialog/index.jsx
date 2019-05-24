@@ -6,7 +6,7 @@ const EditCommentDialog = ({
 }) => (
   <div
     className="modal fade"
-    id="exampleModalCenter"
+    id="editCommentDialog"
     tabIndex="-1"
     role="dialog"
     aria-labelledby="exampleModalCenterTitle"

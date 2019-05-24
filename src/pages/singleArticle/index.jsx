@@ -21,7 +21,6 @@ import {
 } from '../../actions/index';
 
 export class SingleArticles extends React.Component {
-
   state = {
     likes: '',
     dislikes: '',

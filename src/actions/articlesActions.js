@@ -84,11 +84,10 @@ export const fetchArticles = () => dispatch => axios.get(`${process.env.baseURL}
     });
   });
 
-export const getSingleArticle = slug => dispatch => axios.get(`${process.env.baseURL}/articles/${slug}`)
+export const getSingleArticle = slug => dispatch => axiosInstance.get(`${process.env.baseURL}/articles/${slug}`)
   .then((response) => {
     dispatch(fetchAnArticleSuccess(response));
   }).catch((err) => {
-    console.log(err.response.data);
     dispatch(fetchAnArticleFailure(err.response.data));
     notify.show('Errors have occured', 'error', 4000);
   });
@@ -118,5 +117,12 @@ export const editSingleArticle = (
     notify.show('Errors have occured', 'error', 4000);
   });
 
+export const fetchReadingStatsActions = () => dispatch => axiosInstance.get('users/articles/most-recent-reads')
+  .then((response) => {
+    dispatch({
+      type: 'FETCH_READ_STATS',
+      payload: response.data.read_stats,
+    });
+  });
 
 export default postArticle;
