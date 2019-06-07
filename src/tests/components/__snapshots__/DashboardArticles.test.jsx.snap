@@ -2,23 +2,34 @@
 
 exports[`Dashboard Articles Component Should render without crashing 1`] = `
 <div>
-  <p
-    className="text"
+  <div
+    className="container"
   >
-    Showing
-     
-    <strong />
-     
-    out of
-     
-    <strong>
-      7
-    </strong>
-  </p>
+    <span
+      className="text"
+    >
+      Showing
+       
+      <strong />
+       
+      out of
+       
+      <strong>
+        7
+      </strong>
+    </span>
+    <a
+      className="readingStatsLink"
+      href="/reading-stats"
+    >
+      Check the Articles Reading Stats
+    </a>
+  </div>
   <div
     className="container"
     style={
       Object {
+        "clear": "both",
         "marginTop": "20px",
       }
     }
@@ -174,6 +185,7 @@ exports[`Dashboard Articles Component Should render without crashing 1`] = `
     className="container"
     style={
       Object {
+        "clear": "both",
         "marginTop": "20px",
       }
     }
@@ -329,6 +341,7 @@ exports[`Dashboard Articles Component Should render without crashing 1`] = `
     className="container"
     style={
       Object {
+        "clear": "both",
         "marginTop": "20px",
       }
     }
@@ -484,6 +497,7 @@ exports[`Dashboard Articles Component Should render without crashing 1`] = `
     className="container"
     style={
       Object {
+        "clear": "both",
         "marginTop": "20px",
       }
     }
@@ -639,6 +653,7 @@ exports[`Dashboard Articles Component Should render without crashing 1`] = `
     className="container"
     style={
       Object {
+        "clear": "both",
         "marginTop": "20px",
       }
     }
@@ -794,6 +809,7 @@ exports[`Dashboard Articles Component Should render without crashing 1`] = `
     className="container"
     style={
       Object {
+        "clear": "both",
         "marginTop": "20px",
       }
     }
@@ -949,6 +965,7 @@ exports[`Dashboard Articles Component Should render without crashing 1`] = `
     className="container"
     style={
       Object {
+        "clear": "both",
         "marginTop": "20px",
       }
     }

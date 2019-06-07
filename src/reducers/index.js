@@ -10,6 +10,7 @@ import commentsReducer from './commentsReducer';
 import likeDislikeReducer from './likeDislikeReducer';
 import ratingsReducers from './ratingsReducers';
 
+import searchReducer from './searchReducer';
 
 export default combineReducers({
   auth: authReducer,
@@ -24,4 +25,5 @@ export default combineReducers({
   comments: commentsReducer,
   likeDislike: likeDislikeReducer,
   ratingsReducers,
+  search: searchReducer,
 });

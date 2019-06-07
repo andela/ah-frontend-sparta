@@ -41,7 +41,7 @@ describe('signupSignin actions tests', () => {
     const props = {
       history: { push: jest.fn() },
     };
-    return signUpUser(userData, props).then(results => expect(results).toBe(undefined),);
+    return signUpUser(userData, props).then(results => expect(results).toBe(undefined));
   });
 
   it('signUpUser Error', () => {
@@ -66,7 +66,7 @@ describe('signupSignin actions tests', () => {
     const props = {
       history: { push: jest.fn() },
     };
-    return signUpUser(userData, props).then(results => expect(results).toBe(undefined), );
+    return signUpUser(userData, props).then(results => expect(results).toBe(undefined));
   });
 
   it('signInUser Success', () => {
@@ -93,7 +93,7 @@ describe('signupSignin actions tests', () => {
     const props = {
       history: { push: jest.fn() },
     };
-    return signInUser(userData, props).then(results => expect(results).toBe(undefined),);
+    return signInUser(userData, props).then(results => expect(results).toBe(undefined));
   });
 
   it('signInUser Error', () => {

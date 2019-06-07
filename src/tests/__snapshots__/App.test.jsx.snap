@@ -9,7 +9,7 @@ Array [
       className="nav-logo"
     >
       <a
-        href="/"
+        href="/dashboard"
         onClick={[Function]}
       >
         <img

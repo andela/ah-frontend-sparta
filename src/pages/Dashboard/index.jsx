@@ -8,6 +8,20 @@ import { getOriginal, getNext } from '../../actions/paginationActions';
 
 import './Dashboard.scss';
 
+const SearchAlert = ({ message, color }) => (
+  <div className={`alert ${color} alert-dismissible fade show`} role="alert">
+    {' '}
+    {message}
+    <button
+      type="button"
+      className="close"
+      data-dismiss="alert"
+      aria-label="Close"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+);
 
 export class Dashboard extends React.Component {
   componentDidMount() {
@@ -32,11 +46,25 @@ export class Dashboard extends React.Component {
     const {
       firstArticles, paginateArticles, pageState: { next, prev },
       articles,
+      searchArticles,
     } = this.props;
+
+    const searchResult = this.props.searchArticles.results;
 
     return (
       <div>
-        {paginateArticles.length === 0 ? <DashboardArticles firstArticles={firstArticles} totalArticles={articles} /> : <DashboardArticles paginateArticles={paginateArticles} firstArticles={firstArticles} totalArticles={articles} />}
+        {searchArticles && searchArticles.count === 0 ? (
+          <SearchAlert
+            message="OOPS!! The Article you are looking for could be not found. Try again!"
+            color="alert-warning"
+          />
+        ) : (
+          <SearchAlert
+            message="Woow, your results were found"
+            color="alert-success"
+          />
+        ) }
+        {searchResult && searchResult.length !== 0 ? <DashboardArticles totalArticles={searchResult} /> : (paginateArticles.length === 0 ? <DashboardArticles firstArticles={firstArticles} totalArticles={articles} /> : <DashboardArticles paginateArticles={paginateArticles} firstArticles={firstArticles} totalArticles={articles} />)}
         <div className="container pagination-buttons article-btns">
           {prev ? (
             <button type="button" className="btn left pagButton" onClick={this.fetchPrevious}>
@@ -65,6 +93,7 @@ export class Dashboard extends React.Component {
 Dashboard.defaultProps = {
   firstArticles: [],
   paginateArticles: [],
+  searchArticles: '',
 };
 Dashboard.propTypes = {
   getArticles: PropTypes.func.isRequired,
@@ -72,6 +101,7 @@ Dashboard.propTypes = {
   paginateArticles: PropTypes.arrayOf(PropTypes.object),
   fetchOriginal: PropTypes.func.isRequired,
   fetchNext: PropTypes.func.isRequired,
+  searchArticles: PropTypes.arrayOf(PropTypes.object),
 };
 
 const mapStateToProps = state => ({
@@ -79,6 +109,7 @@ const mapStateToProps = state => ({
   paginateArticles: state.paginateArticles,
   firstArticles: state.firstArticles,
   pageState: state.pageState,
+  searchArticles: state.search,
 });
 const mapDispatchToProps = dispatch => ({
   fetchOriginal: () => {

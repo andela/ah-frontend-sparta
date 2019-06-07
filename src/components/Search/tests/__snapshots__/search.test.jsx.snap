@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search page should render without failing 1`] = `
+<div
+  className="search-container"
+>
+  <form>
+    <input
+      id="searchInput"
+      name="query"
+      placeholder="Search by Article title"
+      type="text"
+    />
+    <button
+      type="submit"
+    >
+      <i
+        className="fa fa-search"
+      />
+    </button>
+  </form>
+</div>
+`;
